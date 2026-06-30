@@ -1,0 +1,45 @@
+.reveal-modal { max-width: 720px; }
+
+.reveal-compare {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1rem;
+}
+.reveal-pick {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+}
+.reveal-pick-who { font-size: 0.72rem; opacity: 0.65; text-transform: uppercase; letter-spacing: 0.04em; }
+.reveal-pick-name { font-weight: 700; font-size: 1.05rem; }
+.reveal-pick--agree { border-color: rgba(120, 220, 150, 0.5); background: rgba(120, 220, 150, 0.08); }
+.reveal-vs {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; font-weight: 800; opacity: 0.7; min-width: 2rem;
+}
+
+.reveal-list { margin-top: 0.25rem; }
+.reveal-card { cursor: default; opacity: 0.96; }
+.reveal-badges { display: inline-flex; gap: 0.35rem; }
+.reveal-badge {
+  font-size: 0.68rem; font-weight: 700; padding: 0.1rem 0.45rem;
+  border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.reveal-badge--you   { background: rgba(120, 170, 255, 0.22); color: #cfe0ff; }
+.reveal-badge--judge { background: rgba(255, 200, 110, 0.22); color: #ffe6bd; }
+
+.reveal-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-top: 1rem; }
+.reveal-btn {
+  padding: 0.55rem 1.1rem; border-radius: 10px; font-weight: 700; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: inherit;
+}
+.reveal-btn:hover:not(:disabled) { background: rgba(255,255,255,0.12); }
+.reveal-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.reveal-btn--prim { background: var(--accent, #c9893a); border-color: transparent; color: #1b120a; }
+.reveal-note { width: 100%; margin: 0.2rem 0 0; font-size: 0.78rem; opacity: 0.6; }

@@ -1,0 +1,28 @@
+# Estudo principal — desenho entre-sujeitos balanceado.
+# Fatores: quem_avanca (model-led vs human-led) × composição (notável vs comum).
+# Tópicos padronizados pra comparabilidade. Atribuição balanceada, single-blind.
+id: main
+title: Mesa de Bar — estudo principal
+description: >
+  2 braços (model-led × human-led) cruzados com 2 composições (figuras notáveis
+  × pessoas comuns), sobre um banco de tópicos padronizado. Atribuição
+  balanceada (round-robin aninhado), participante cego à condição.
+
+arms:
+  - default          # model-led: a ideia do juiz avança
+  - jogador_avanca   # human-led: a escolha do jogador avança
+
+compositions:
+  - pioneiros_ia            # figuras notáveis
+  - pessoas_comuns_brasil   # pessoas comuns (controle de fixação)
+
+assignment: balanced
+blind_condition: true
+
+topics:
+  - "Como tornar o transporte público da sua cidade mais usado?"
+  - "Uma nova forma de as pessoas fazerem amizades na vida adulta"
+  - "Como reduzir o desperdício de comida em casa"
+  - "Um jeito melhor de aprender uma habilidade nova sozinho"
+  - "Como deixar um parque público mais vivo à noite"
+  - "Uma forma de as pessoas pouparem dinheiro sem sofrer"

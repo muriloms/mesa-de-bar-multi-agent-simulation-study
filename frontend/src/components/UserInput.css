@@ -1,0 +1,172 @@
+.user-input {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 12px;
+  row-gap: 8px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.user-input--expanded {
+  height: 100%;
+  grid-template-rows: 1fr auto auto;
+}
+
+.user-input-label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  align-self: center;
+}
+
+/* Linha 1 — proposta (labels esquerda, textarea direita) */
+.user-input > .user-input-label:first-of-type {
+  grid-column: 1;
+  grid-row: 1;
+}
+.user-input-textarea {
+  grid-column: 2;
+  grid-row: 1;
+  background: var(--wood-darkest);
+  border: 1px solid var(--wood-mid);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--text-warm);
+  min-height: 50px;
+  width: 100%;
+}
+.user-input-textarea:focus {
+  border-color: var(--neon-cyan);
+}
+
+.user-input--expanded .user-input-textarea {
+  min-height: 0;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 14px 16px;
+  resize: none;
+}
+
+/* Linha 2 — aposta com slider */
+.user-input-bid {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-input-bid-range {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: var(--wood-dark);
+  border: 1px solid var(--wood-mid);
+  outline: none;
+  padding: 0;
+}
+.user-input-bid-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 18px;
+  background: var(--neon-pink);
+  cursor: pointer;
+  border: 0;
+}
+.user-input-bid-range::-moz-range-thumb {
+  width: 8px;
+  height: 18px;
+  background: var(--neon-pink);
+  cursor: pointer;
+  border: 0;
+}
+
+.user-input-bid-value {
+  color: var(--neon-pink);
+  font-weight: 700;
+  font-size: 13px;
+  min-width: 56px;
+  text-align: right;
+}
+
+/* Linha 3 — ações */
+.user-input-actions {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Toggle de modo (Apostar / Passar / Endossar) */
+.user-input-mode-toggle {
+  display: inline-flex;
+  border: 1px solid var(--wood-mid);
+  background: var(--wood-darkest);
+}
+
+.user-input-mode-btn {
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--wood-mid);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 100ms;
+}
+.user-input-mode-btn:last-child { border-right: none; }
+.user-input-mode-btn:hover:not(:disabled) {
+  background: var(--wood-mid);
+  color: var(--text-warm);
+}
+.user-input-mode-btn--on {
+  background: var(--neon-cyan);
+  color: var(--wood-darkest);
+}
+.user-input-mode-btn--on:hover {
+  background: var(--neon-cyan);
+  color: var(--wood-darkest);
+}
+.user-input-mode-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.user-input-btn {
+  padding: 8px 18px;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.user-input-btn--prim {
+  background: var(--amber);
+  color: var(--wood-darkest);
+  border: 2px solid var(--amber);
+}
+.user-input-btn--prim:hover:not(:disabled) {
+  background: var(--amber-bright);
+  border-color: var(--amber-bright);
+}
+.user-input-btn--prim:disabled {
+  background: transparent;
+  border-color: var(--wood-mid);
+  color: var(--text-dim);
+  cursor: not-allowed;
+}

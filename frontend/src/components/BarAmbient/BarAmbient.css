@@ -1,0 +1,200 @@
+/* ===== COUNTER (balcão atrás) ===== */
+.bar-counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, var(--wood-darker) 0%, var(--wood-darker) 70%, var(--wood-darkest) 100%);
+  border-bottom: 3px solid var(--wood-mid);
+  z-index: 1;
+  box-shadow: 0 4px 0 var(--wood-darkest), inset 0 -10px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bar-shelves {
+  position: absolute;
+  top: 8px;
+  left: 1.5%;
+  right: 28%;
+  height: 84px;
+}
+
+.bar-shelf-row {
+  position: relative;
+  height: 40px;
+  border-bottom: 2px solid var(--wood-mid);
+}
+
+.bar-bot {
+  position: absolute;
+  width: 11px;
+  height: 32px;
+  bottom: 4px;
+}
+.bar-bot::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  width: 5px;
+  height: 7px;
+  background: inherit;
+  border: 1px solid var(--wood-darkest);
+}
+.bar-bot--g { background: #1a3520; border: 1px solid #0a1810; }
+.bar-bot--g::after { content: ""; position: absolute; top: 14px; left: 1px; right: 1px; height: 9px; background: #3a6b3a; }
+.bar-bot--r { background: #3a1a08; border: 1px solid #1a0a04; }
+.bar-bot--r::after { content: ""; position: absolute; top: 14px; left: 1px; right: 1px; height: 9px; background: #a04a18; }
+.bar-bot--b { background: #1a1a35; border: 1px solid #0a0a18; }
+.bar-bot--b::after { content: ""; position: absolute; top: 14px; left: 1px; right: 1px; height: 9px; background: #5a5aa0; }
+.bar-bot--y { background: #3a2a08; border: 1px solid #1a1004; }
+.bar-bot--y::after { content: ""; position: absolute; top: 14px; left: 1px; right: 1px; height: 9px; background: #d4a020; }
+
+.bar-mirror {
+  position: absolute;
+  top: 8px;
+  right: 14%;
+  width: 130px;
+  height: 70px;
+  background: linear-gradient(180deg, #2a1810 0%, var(--wood-darker) 100%);
+  border: 2px solid var(--wood-mid);
+  box-shadow: inset 0 0 0 1px rgba(255, 200, 100, 0.06);
+}
+.bar-mirror::before {
+  content: "";
+  position: absolute;
+  top: 6px; left: 8px;
+  width: 30px; height: 2px;
+  background: rgba(255, 200, 100, 0.1);
+}
+.bar-mirror::after {
+  content: "";
+  position: absolute;
+  top: 14px; left: 8px;
+  width: 18px; height: 1px;
+  background: rgba(255, 200, 100, 0.08);
+}
+
+.bar-juke {
+  position: absolute;
+  bottom: 8px;
+  right: 3%;
+  width: 38px;
+  height: 50px;
+  background: var(--wood-light);
+  border: 2px solid var(--wood-mid);
+}
+.bar-juke::before {
+  content: "";
+  position: absolute;
+  top: 4px; left: 4px; right: 4px;
+  height: 14px;
+  background: var(--wood-darkest);
+  border: 1px solid var(--wood-dark);
+}
+.bar-juke::after {
+  content: "♪";
+  position: absolute;
+  bottom: 2px; left: 0; right: 0;
+  text-align: center;
+  color: var(--amber);
+  font-size: 11px;
+  font-family: serif;
+}
+.bar-juke-light {
+  position: absolute;
+  top: 6px; left: 6px;
+  width: 4px; height: 4px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  animation: jukepulse 1.5s infinite;
+}
+@keyframes jukepulse {
+  0%, 100% { background: var(--neon-cyan); }
+  50%      { background: var(--neon-pink); }
+}
+
+.bar-neon {
+  position: absolute;
+  top: 14px;
+  right: 6%;
+  color: var(--neon-pink);
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 18px;
+  border: 2px solid var(--neon-pink);
+  padding: 5px 14px;
+  animation: flicker 4.2s infinite;
+  text-shadow: 0 0 6px rgba(255, 90, 140, 0.7), 0 0 12px rgba(255, 90, 140, 0.4);
+  box-shadow: 0 0 8px rgba(255, 90, 140, 0.3);
+  z-index: 2;
+}
+
+/* ===== LAMP ===== */
+.bar-lamp {
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  pointer-events: none;
+}
+.bar-lamp-cord {
+  width: 2px;
+  height: 50px;
+  background: var(--wood-darkest);
+  margin: 0 auto;
+}
+.bar-lamp-cone {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 22px 22px 22px;
+  border-color: transparent var(--wood-darker) transparent var(--wood-darker);
+  border-bottom-color: var(--wood-mid);
+}
+.bar-lamp-bulb {
+  width: 14px;
+  height: 6px;
+  background: var(--neon-cream);
+  border-radius: 50%;
+  margin: -3px auto 0;
+  box-shadow: 0 0 10px var(--neon-cream), 0 0 20px var(--amber);
+  animation: bulb 4s infinite;
+}
+@keyframes bulb {
+  0%, 100% { box-shadow: 0 0 10px var(--neon-cream), 0 0 20px var(--amber); }
+  50%      { box-shadow: 0 0 8px var(--neon-cream),  0 0 16px var(--amber); }
+}
+
+/* ===== HALO ===== */
+.bar-halo {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 720px;
+  height: 60%;
+  background: radial-gradient(ellipse 50% 50% at center,
+    rgba(240, 160, 32, 0.28) 0%,
+    rgba(240, 160, 32, 0.14) 30%,
+    rgba(240, 160, 32, 0.04) 55%,
+    transparent 75%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ===== VIGNETTE — bem suave, só nas bordas extremas ===== */
+.bar-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center,
+    transparent 65%,
+    rgba(0, 0, 0, 0.22) 92%,
+    rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 20;
+}

@@ -1,0 +1,56 @@
+/* =================================================================
+   Mesa de Bar — design tokens (Fase 2A)
+   Estética: bar à noite, mogno + âmbar + neon, pixel art, retrô.
+   ================================================================= */
+
+:root {
+  /* === MADEIRA / BASE === */
+  --wood-darkest: #0a0604;
+  --wood-darker:  #1a0e08;
+  --wood-dark:    #2d1408;
+  --wood-mid:     #3a2510;
+  --wood-warm:    #4a2f18;
+  --wood-light:   #5a3818;
+
+  /* === ÂMBAR (acento principal) === */
+  --amber:        #f0a020;
+  --amber-dim:    #a07014;
+  --amber-bright: #ffc850;
+
+  /* === NEON / DESTAQUES === */
+  --neon-pink:   #ff5a8c;
+  --neon-cyan:   #5ee0ff;
+  --neon-purple: #c79bf0;
+  --neon-green:  #6df57b;
+  --neon-cream:  #fff5d0;
+
+  /* === PAPEL / TEXTO === */
+  --paper:         #e8d4a8;
+  --paper-shadow:  #c8b48a;
+  --text-warm:     #e8d4a8;
+  --text-dim:      #a08868;
+  --text-darker:   #7a5530;
+  --text-darkest:  #3d2a16;
+
+  /* === ESTADOS === */
+  --warning: #ff8c2c;
+  --danger:  #ff5c5c;
+  --success: var(--neon-green);
+
+  /* === TIPOGRAFIA === */
+  --font-mono: "Lucida Console", "Courier New", Consolas, monospace;
+
+  /* === ESPAÇAMENTO === */
+  --sp-xxs: 2px;
+  --sp-xs:  4px;
+  --sp-s:   8px;
+  --sp-m:   12px;
+  --sp-l:   16px;
+  --sp-xl:  24px;
+  --sp-xxl: 32px;
+
+  /* === LARGURAS === */
+  --border-pixel: 2px solid var(--amber);
+  --border-thin:  1px solid var(--wood-mid);
+  --border-dashed:1px dashed var(--wood-mid);
+}

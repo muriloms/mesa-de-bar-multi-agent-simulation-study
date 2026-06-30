@@ -1,0 +1,127 @@
+/* Modal padrão do bar — base usada em todos os modais */
+.modal-backdrop,
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 6, 4, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000;
+  padding: 20px;
+}
+
+.modal-content,
+.modal-container {
+  background: var(--wood-darker);
+  border: 2px solid var(--amber);
+  width: 100%;
+  max-width: 560px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+  gap: 12px;
+  box-shadow: 0 6px 0 var(--wood-darkest);
+  color: var(--text-warm);
+  position: relative;
+  overflow-y: auto;
+}
+
+.modal-content h2,
+.modal-container h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--amber);
+  text-transform: uppercase;
+  border-bottom: 1px dashed var(--wood-mid);
+  padding-bottom: 8px;
+}
+
+.modal-content label,
+.modal-container label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select,
+.modal-container input,
+.modal-container textarea,
+.modal-container select {
+  width: 100%;
+  background: var(--wood-darkest);
+  border: 1px solid var(--wood-mid);
+  color: var(--text-warm);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 13px;
+}
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus,
+.modal-container input:focus,
+.modal-container textarea:focus,
+.modal-container select:focus {
+  border-color: var(--amber);
+  outline: none;
+}
+
+.modal-content textarea,
+.modal-container textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  border-top: 1px dashed var(--wood-mid);
+  padding-top: 12px;
+}
+
+.modal-actions button {
+  padding: 8px 18px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.modal-actions .btn-cancel,
+.modal-actions .cancel-button {
+  background: transparent;
+  border: 2px solid var(--wood-mid);
+  color: var(--text-dim);
+}
+.modal-actions .btn-cancel:hover,
+.modal-actions .cancel-button:hover {
+  background: var(--wood-mid);
+  color: var(--text-warm);
+}
+
+.modal-actions .btn-save,
+.modal-actions .save-button {
+  background: var(--amber);
+  border: 2px solid var(--amber);
+  color: var(--wood-darkest);
+}
+.modal-actions .btn-save:hover,
+.modal-actions .save-button:hover {
+  background: var(--amber-bright);
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+.form-row > * { flex: 1; }

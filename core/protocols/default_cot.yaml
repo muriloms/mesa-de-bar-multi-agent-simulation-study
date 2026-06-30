@@ -1,0 +1,21 @@
+# Variante do default com CoT nas personas (raciocínio antes de propor).
+# Braço para isolar o efeito do CoT na homogeneização/fixação.
+id: default_cot
+version: 3.0.0
+description: >
+  Igual ao default, mas as personas raciocinam (CoT) antes de propor. Braço
+  para testar se o CoT reduz fixação/homogeneização do pool.
+language: pt
+rounds: 4
+quem_avanca: juiz_ia
+source_blind_on_choice: true
+reasoning_mode: cot
+judge:
+  criterion: originalidade
+owner:
+  bias: neutral
+memory:
+  mode: reflected_summary
+instruments:
+  pre_session: pre_session_cocreation_v1
+  post_session: post_session_cocreation_v1

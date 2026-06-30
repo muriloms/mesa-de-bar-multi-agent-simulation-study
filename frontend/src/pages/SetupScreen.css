@@ -1,0 +1,258 @@
+/* =================================================================
+   Onboarding do estudo — "convite à mesa"
+   Estética herdada: bar à noite, mogno + âmbar + neon, monospace.
+   Assinatura: a "comanda da noite" em papel sobre o balcão escuro.
+   ================================================================= */
+
+.onb {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 28px 20px 72px;
+  color: var(--text-warm);
+}
+
+/* Foco de luz sobre a mesa (luminária) */
+.onb::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 60% at 50% -8%, rgba(240,160,32,0.16), transparent 60%);
+  z-index: 0;
+}
+.onb > * { position: relative; z-index: 1; }
+
+/* ---- barra utilitária ---- */
+.onb-util {
+  display: flex; justify-content: flex-end; align-items: center; gap: 8px;
+  margin-bottom: 8px;
+}
+.onb-lang {
+  background: var(--wood-darker); color: var(--amber);
+  border: 1px solid var(--amber-dim); padding: 4px 8px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+}
+.onb-gear {
+  border: 1px solid var(--amber-dim); color: var(--amber);
+  padding: 4px 9px; font-size: 14px; line-height: 1;
+  background: var(--wood-darker);
+}
+.onb-gear:hover { background: var(--amber); color: var(--wood-darker); }
+
+/* ---- HERO ---- */
+.onb-hero { text-align: center; padding: 14px 0 6px; }
+.onb-eyebrow {
+  margin: 0 0 14px; font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--amber-dim);
+}
+.onb-title {
+  margin: 0; line-height: 0.92; font-weight: 700; letter-spacing: 2px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.onb-title-line {
+  font-size: clamp(44px, 11vw, 92px); color: var(--neon-cream);
+  text-shadow: 0 0 2px rgba(255,245,208,0.6);
+}
+.onb-title-de {
+  font-size: clamp(16px, 3.4vw, 26px); color: var(--text-dim);
+  text-transform: lowercase; letter-spacing: 6px; margin: -2px 0;
+}
+.onb-title-line--neon {
+  color: var(--amber-bright);
+  text-shadow:
+    0 0 6px rgba(240,160,32,0.85), 0 0 18px rgba(240,160,32,0.55),
+    0 0 40px rgba(240,160,32,0.35);
+  animation: onb-flicker 5.5s infinite steps(1);
+}
+@keyframes onb-flicker {
+  0%, 92%, 96%, 100% { opacity: 1; }
+  93%, 95% { opacity: 0.78; }
+  94% { opacity: 0.55; }
+}
+.onb-tagline {
+  max-width: 540px; margin: 18px auto 0; font-size: 14px; line-height: 1.7;
+  color: var(--paper);
+}
+.onb-rule {
+  width: 120px; height: 2px; margin: 22px auto 0;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  box-shadow: 0 0 8px rgba(240,160,32,0.6);
+}
+
+/* ---- cards de seção ---- */
+.onb-card {
+  background: linear-gradient(180deg, var(--wood-darker), var(--wood-dark));
+  border: 1px solid var(--wood-mid);
+  border-left: 3px solid var(--amber-dim);
+  padding: 20px 22px; margin-top: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+.onb-kicker {
+  display: inline-block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); font-weight: 700; margin-bottom: 10px;
+}
+.onb-kicker::before { content: "▸ "; color: var(--amber-dim); }
+.onb-kicker--dark { color: var(--text-darkest); }
+.onb-kicker--dark::before { color: var(--text-darker); }
+.onb-body { margin: 0; font-size: 13.5px; line-height: 1.75; color: var(--paper); }
+
+/* ---- fluxo do jogo (chips) ---- */
+.onb-flow {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px;
+}
+.onb-flow-item { display: inline-flex; align-items: center; gap: 8px; }
+.onb-chip {
+  border: 1px solid var(--amber-dim); color: var(--amber-bright);
+  padding: 5px 11px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  white-space: nowrap; background: rgba(240,160,32,0.06);
+}
+.onb-arrow { color: var(--amber-dim); font-size: 14px; }
+
+/* ---- papéis da IA ---- */
+.onb-roles {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; margin-top: 14px;
+}
+.onb-role { display: flex; gap: 12px; align-items: flex-start; }
+.onb-role-glyph {
+  font-size: 22px; line-height: 1.2; flex-shrink: 0; width: 26px; text-align: center;
+}
+.onb-role-glyph--cyan   { color: var(--neon-cyan);   text-shadow: 0 0 8px rgba(94,224,255,0.5); }
+.onb-role-glyph--amber  { color: var(--amber-bright); text-shadow: 0 0 8px rgba(240,160,32,0.5); }
+.onb-role-glyph--pink   { color: var(--neon-pink);   text-shadow: 0 0 8px rgba(255,90,140,0.5); }
+.onb-role-glyph--purple { color: var(--neon-purple); text-shadow: 0 0 8px rgba(199,155,240,0.5); }
+.onb-role-title { margin: 0 0 3px; font-size: 13px; letter-spacing: 0.5px; color: var(--text-warm); }
+.onb-role-body { margin: 0; font-size: 12.5px; line-height: 1.6; color: var(--text-dim); }
+
+/* ---- comanda da noite (papel) — assinatura ---- */
+.onb-tab {
+  margin-top: 22px; padding: 18px 22px 22px;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.025) 0 27px, transparent 27px 28px),
+    var(--paper);
+  color: var(--text-darkest);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  /* topo serrilhado de comanda */
+  clip-path: polygon(0 6px,4% 0,8% 6px,12% 0,16% 6px,20% 0,24% 6px,28% 0,32% 6px,36% 0,40% 6px,44% 0,48% 6px,52% 0,56% 6px,60% 0,64% 6px,68% 0,72% 6px,76% 0,80% 6px,84% 0,88% 6px,92% 0,96% 6px,100% 0,100% 100%,0 100%);
+}
+.onb-tab-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 2px dashed var(--paper-shadow); padding-bottom: 8px; margin-bottom: 6px;
+}
+.onb-tab-sub { font-style: italic; font-size: 11px; color: var(--text-darker); letter-spacing: 1px; }
+.onb-steps { list-style: none; margin: 0; padding: 0; }
+.onb-step {
+  display: grid; grid-template-columns: auto auto 1fr auto; align-items: baseline; gap: 8px;
+  padding: 9px 0; border-bottom: 1px dotted var(--paper-shadow);
+}
+.onb-step:last-child { border-bottom: none; }
+.onb-step-num { font-weight: 700; color: var(--amber-dim); font-size: 13px; }
+.onb-step-title { font-weight: 700; color: var(--text-darkest); font-size: 13px; }
+.onb-step-dots { border-bottom: 1px dotted var(--paper-shadow); transform: translateY(-3px); }
+.onb-step-note { color: var(--text-darker); font-size: 12px; text-align: right; }
+
+/* ---- linha do nome fictício (ênfase) ---- */
+.onb-fictitious {
+  margin: 14px 0 0; padding: 10px 14px; font-size: 13px; line-height: 1.6;
+  color: var(--amber-bright); font-weight: 700;
+  background: rgba(240,160,32,0.08); border-left: 3px solid var(--amber);
+}
+
+/* ---- destaque do download ---- */
+.onb-callout {
+  display: flex; gap: 16px; align-items: flex-start; margin-top: 22px; padding: 20px 22px;
+  background: rgba(255,90,140,0.06);
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 18px rgba(255,90,140,0.2);
+}
+.onb-callout-mark {
+  font-size: 30px; line-height: 1; color: var(--neon-pink); flex-shrink: 0;
+  text-shadow: 0 0 12px rgba(255,90,140,0.6);
+}
+.onb-callout-title { margin: 0 0 6px; font-size: 14px; letter-spacing: 1px; color: var(--neon-pink); text-transform: uppercase; }
+.onb-callout-body { margin: 0; font-size: 13px; line-height: 1.7; color: var(--paper); }
+
+/* ---- CTA ---- */
+.onb-cta { text-align: center; margin-top: 30px; }
+.onb-cta-label {
+  display: block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 10px;
+}
+.onb-input {
+  width: 100%; max-width: 420px; text-align: center;
+  background: var(--wood-darkest); color: var(--neon-cream);
+  border: 2px solid var(--amber-dim); padding: 14px 16px;
+  font-family: var(--font-mono); font-size: 18px; letter-spacing: 1px;
+}
+.onb-input::placeholder { color: var(--text-darker); }
+.onb-input:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 12px rgba(240,160,32,0.4); }
+.onb-cta-hint { margin: 8px 0 20px; font-size: 12px; color: var(--text-dim); }
+.onb-start {
+  background: var(--amber); color: var(--wood-darkest);
+  border: 2px solid var(--amber); padding: 14px 34px;
+  font-family: var(--font-mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  box-shadow: 0 0 16px rgba(240,160,32,0.4);
+  transition: all 100ms ease-out;
+}
+.onb-start:hover:not(:disabled) {
+  background: var(--amber-bright); border-color: var(--amber-bright);
+  box-shadow: 0 0 26px rgba(255,200,80,0.6); transform: translateY(-1px);
+}
+.onb-start:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+
+/* ---- responsivo ---- */
+@media (max-width: 600px) {
+  .onb-roles { grid-template-columns: 1fr; }
+  .onb-step { grid-template-columns: auto 1fr; gap: 4px 8px; }
+  .onb-step-dots { display: none; }
+  .onb-step-note { grid-column: 2; text-align: left; }
+}
+
+/* ---- acessibilidade ---- */
+@media (prefers-reduced-motion: reduce) {
+  .onb-title-line--neon { animation: none; }
+  .onb-start { transition: none; }
+}
+
+/* === Seletores de tema e composição (quando habilitados) === */
+.onb-choice { margin-top: 18px; text-align: left; }
+
+.onb-theme-list { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.onb-theme-area { display: flex; flex-direction: column; gap: 5px; }
+.onb-theme-area-title {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--amber-dim); font-weight: 700;
+}
+.onb-theme-opt {
+  text-align: left; background: var(--wood-darkest); border: 1px solid var(--wood-mid);
+  color: var(--text-warm); font-family: inherit; font-size: 13px; padding: 9px 12px; cursor: pointer;
+  transition: all 90ms ease-out;
+}
+.onb-theme-opt:hover { border-color: var(--amber); color: var(--paper); }
+.onb-theme-opt--on { border-color: var(--neon-cyan); color: var(--neon-cyan); background: rgba(94,224,255,0.06); }
+
+.onb-comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 8px; }
+.onb-comp {
+  background: var(--wood-darkest); border: 1px solid var(--wood-mid); padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.onb-comp--on { border-color: var(--neon-cyan); box-shadow: 0 0 0 1px var(--neon-cyan); }
+.onb-comp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.onb-comp-title { font-size: 15px; font-weight: 800; color: var(--paper); letter-spacing: 0.5px; }
+.onb-comp-count { font-size: 10px; color: var(--text-dim); white-space: nowrap; }
+.onb-comp-desc { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.4; }
+.onb-comp-personas { display: flex; flex-direction: column; gap: 5px; }
+.onb-persona { display: flex; flex-direction: column; background: var(--wood-dark); padding: 5px 8px; border-left: 2px solid var(--amber-dim); }
+.onb-persona-name { font-size: 12px; font-weight: 700; color: var(--neon-cream); }
+.onb-persona-role { font-size: 10px; color: var(--amber); text-transform: uppercase; letter-spacing: 0.5px; }
+.onb-persona-desc { font-size: 11px; color: var(--text-dim); margin-top: 2px; line-height: 1.35; }
+.onb-comp-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 2px; }
+.onb-comp-more { background: none; border: none; color: var(--amber-dim); font-family: inherit; font-size: 11px; cursor: pointer; text-decoration: underline; padding: 0; }
+.onb-comp-pick {
+  background: transparent; border: 1px solid var(--amber); color: var(--amber);
+  font-family: inherit; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase;
+  padding: 6px 10px; cursor: pointer; transition: all 90ms ease-out;
+}
+.onb-comp-pick:hover { background: var(--amber); color: var(--wood-darkest); }
+.onb-comp-pick--on { background: var(--neon-cyan); border-color: var(--neon-cyan); color: var(--wood-darkest); }

@@ -1,0 +1,118 @@
+.lab-page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 20px;
+  background: var(--wood-darkest);
+  position: relative;
+  z-index: 50;
+}
+
+.lab-content-wrapper {
+  background: var(--wood-darker);
+  border: 2px solid var(--amber);
+  width: 100%;
+  max-width: 920px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 6px 0 var(--wood-darkest);
+}
+
+.lab-header {
+  border-bottom: 1px dashed var(--wood-mid);
+  padding-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.lab-header h1 {
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin: 0;
+}
+.lab-header p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.lab-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 720px) {
+  .lab-form-grid { grid-template-columns: 1fr; }
+}
+
+.form-group-lab {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form-group-lab.full-width { grid-column: 1 / -1; }
+
+.form-group-lab label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.form-group-lab input,
+.form-group-lab textarea {
+  background: var(--wood-darkest);
+  border: 1px solid var(--wood-mid);
+  color: var(--text-warm);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 13px;
+}
+.form-group-lab input:focus,
+.form-group-lab textarea:focus {
+  border-color: var(--amber);
+  outline: none;
+}
+
+.lab-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px dashed var(--wood-mid);
+  padding-top: 16px;
+}
+
+.lab-actions button {
+  padding: 10px 22px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: var(--amber);
+  color: var(--wood-darkest);
+  border: 2px solid var(--amber);
+}
+.primary-button:hover {
+  background: var(--amber-bright);
+}
+
+.secondary-button {
+  background: transparent;
+  border: 2px solid var(--wood-mid);
+  color: var(--text-dim);
+}
+.secondary-button:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}

@@ -1,0 +1,55 @@
+# ===========================================================================
+# CONFIGURAÇÃO DA PLATAFORMA
+# Define funcionalidades, dinâmicas e o que está aberto ou não no Mesa de Bar.
+# Editar aqui muda o comportamento do jogo no próximo deploy (reinício).
+# Confira o resultado em /?admin=1 ou com `python -m catalog`.
+# ===========================================================================
+
+# Modo da plataforma: live (jogo normal) ou simulation (jogador = agente LLM).
+# Em 'simulation', o frontend mostra o painel de simulação.
+mode: simulation
+
+# --- Acesso / Chave da API -------------------------------------------------
+api:
+  provider: openai          # fase atual: OpenAI
+  model: gpt-4o-mini        # modelo usado
+  # true  -> o usuário digita a própria chave no login (campo aparece).
+  # false -> a plataforma usa a chave em 'key' abaixo (campo some do login).
+  user_provides_key: false
+  key: "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"                   # usada só quando user_provides_key: false
+
+# --- Escolha do TEMA da mesa (a pauta da noite) ----------------------------
+theme:
+  # random -> a plataforma sorteia o tema (padrão)
+  # choose -> o usuário escolhe entre os temas configurados (tela inicial)
+  # write  -> o usuário escreve o próprio tema
+  mode: random
+
+# --- Escolha da COMPOSIÇÃO da mesa (quais personas sentam) ------------------
+table:
+  # random -> a plataforma sorteia a composição e as personas (padrão)
+  # choose -> o usuário vê as composições/personas e escolhe
+  mode: random
+  size: 4                   # quantas personas sentam à mesa
+
+# --- Rodadas ---------------------------------------------------------------
+rounds: 4
+
+# --- Dinâmicas do jogo -----------------------------------------------------
+dynamics:
+  # Como a "melhor ideia" da rodada é decidida:
+  #   player_decides -> mostra a escolha do juiz e a do jogador; o jogador
+  #                     decide qual avança (modo interativo / atual).
+  #   judge          -> automática: a escolha do JUIZ sempre avança.
+  #   player         -> automática: a escolha do JOGADOR sempre avança.
+  best_idea: player_decides
+
+  judge_criterion: originalidade   # originalidade | viabilidade | interesse | composto
+  judge_blind_to_source: true      # juiz vê ou não a autoria ao julgar
+  source_blind_on_choice: true     # ideias anônimas na hora de o jogador escolher
+  owner_bias: neutral              # síntese final do Dono do Bar: neutral | pro_human
+
+# --- Formulários -----------------------------------------------------------
+forms:
+  pre_session_enabled: true
+  post_session_enabled: true

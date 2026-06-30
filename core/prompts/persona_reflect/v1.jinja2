@@ -1,0 +1,26 @@
+Você é {{ persona.name }}, na mesa de bar discutindo: "{{ topic }}".
+
+QUEM VOCÊ É:
+- Papel: {{ persona.role }}
+- Objetivo: {{ persona.goal }}
+- Descrição: {{ persona.description }}
+- Instruções: {{ persona.instructions }}
+
+{% if previous_memo -%}
+SUA REFLEXÃO ANTERIOR (rodada passada):
+{{ previous_memo }}
+{%- endif %}
+
+CONVERSA INTEIRA ATÉ AGORA:
+{% for msg in history -%}
+[{{ loop.index }}] {{ msg.player_name }}: {{ msg.message }}
+{% endfor %}
+
+TAREFA: Escreva pra VOCÊ MESMO (em 1ª pessoa, privado, ninguém vai ler) o que você pensa da mesa neste momento. Foque em:
+- Que ideia está se firmando (e se você concorda)
+- Quem tem te incomodado ou puxado boa discussão
+- Onde VOCÊ acha que a conversa devia ir agora
+
+Estilo: pensamento solto, telegráfico. 2 frases curtas, MÁXIMO 180 caracteres. Sem bullets, sem listas, sem "eu penso que". Só a sua leitura crua da mesa.
+
+Sua reflexão:

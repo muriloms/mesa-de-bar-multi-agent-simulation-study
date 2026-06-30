@@ -1,0 +1,109 @@
+.player-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  width: 100px;
+  position: relative;
+}
+
+/* === Thinking bubble — aparece acima do avatar === */
+.player-display--thinking::before {
+  content: "...";
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--paper);
+  color: var(--text-darkest);
+  padding: 5px 11px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border: 2px solid var(--neon-purple);
+  z-index: 10;
+  animation: thinking-bubble-float 1.4s ease-in-out infinite;
+  white-space: nowrap;
+  line-height: 1;
+  box-shadow: 1px 1px 0 var(--wood-darkest);
+}
+
+.player-display--thinking::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 6px 0 6px;
+  border-color: var(--neon-purple) transparent transparent transparent;
+  z-index: 11;
+  animation: thinking-bubble-float 1.4s ease-in-out infinite;
+}
+
+@keyframes thinking-bubble-float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -4px); }
+}
+
+.player-display-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.player-display-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.player-display-heat {
+  display: inline-block;
+  background: var(--neon-pink);
+  color: var(--wood-darkest);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  letter-spacing: 0.5px;
+}
+
+.player-display-role {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.player-display--user .player-display-name {
+  color: var(--neon-cyan);
+}
+
+.player-display--winner .player-display-name {
+  color: var(--neon-pink);
+}
+
+/* === Destaque do SEU assento (você) === */
+.player-display-youtag {
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  color: var(--wood-darkest); background: var(--neon-cyan);
+  padding: 2px 8px; line-height: 1;
+  box-shadow: 0 0 10px rgba(94, 224, 255, 0.5);
+}
+.player-display--you { gap: 4px; }
+.player-display--you .player-display-name { color: var(--neon-cyan); }
+.player-display--you .pixel-avatar {
+  box-shadow: 0 0 0 2px var(--neon-cyan), 0 0 16px rgba(94, 224, 255, 0.4);
+}

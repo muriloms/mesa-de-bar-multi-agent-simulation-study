@@ -1,0 +1,153 @@
+.voting-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 6, 4, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000;
+  padding: 20px;
+}
+
+.voting-modal {
+  background: var(--wood-darker);
+  border: 2px solid var(--amber);
+  width: 100%;
+  max-width: 760px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 26px;
+  box-shadow: 0 6px 0 var(--wood-darkest), 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.voting-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--wood-mid);
+}
+
+.voting-title {
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.voting-sub {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-warm);
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.voting-delegate {
+  margin-top: 4px;
+  background: rgba(94, 224, 255, 0.06);
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 8px 18px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.voting-delegate:hover:not(:disabled) {
+  background: var(--neon-cyan);
+  color: var(--wood-darkest);
+}
+
+.voting-list {
+  display: grid;
+  gap: 10px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.voting-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--paper);
+  color: var(--text-darkest);
+  border: 2px solid var(--wood-mid);
+  padding: 16px 18px;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  transition: all 100ms ease-out;
+  box-shadow: 2px 2px 0 var(--wood-dark);
+}
+.voting-card:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  border-color: var(--amber);
+  background: var(--neon-cream);
+  box-shadow: 4px 4px 0 var(--wood-dark);
+}
+
+.voting-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(122, 85, 48, 0.4);
+}
+
+.voting-card-name {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-darkest);
+}
+
+.stance-pill {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 0;
+  white-space: nowrap;
+}
+.stance-pill--complement {
+  background: rgba(109, 245, 123, 0.18);
+  color: #1c6128;
+  border: 1px solid #6df57b;
+}
+.stance-pill--counter {
+  background: rgba(255, 99, 130, 0.16);
+  color: #8a1f31;
+  border: 1px solid #ff6382;
+}
+.stance-pill--redirect {
+  background: rgba(199, 155, 240, 0.18);
+  color: #5a2890;
+  border: 1px solid #c79bf0;
+}
+
+.voting-card-bid {
+  font-size: 14px;
+  color: #a04018;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.voting-card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-darkest);
+}

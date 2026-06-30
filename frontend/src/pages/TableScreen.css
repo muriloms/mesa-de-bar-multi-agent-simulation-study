@@ -1,0 +1,340 @@
+.table-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background: var(--wood-darkest);
+  position: relative;
+}
+
+.table-loading {
+  padding: 40px;
+  color: var(--amber);
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* === The bar room === */
+.bar-room {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--wood-darker);
+  background-image:
+    repeating-linear-gradient(0deg,
+      #2d1408 0, #2d1408 16px,
+      #180806 16px, #180806 17px,
+      #0e0604 17px, #0e0604 18px),
+    repeating-linear-gradient(90deg,
+      transparent 0, transparent 38px,
+      rgba(0, 0, 0, 0.55) 38px, rgba(0, 0, 0, 0.55) 40px);
+  overflow: hidden;
+}
+
+/* === Stage: 2 columns (main + side panel) === */
+.bar-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.bar-stage-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.bar-stage-table {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 20px;
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* === The TABLE — agora limpa, sem texto === */
+.table-container {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-surface {
+  width: 100%;
+  max-width: 440px;
+  height: 280px;
+  background-color: var(--wood-light);
+  background-image:
+    repeating-radial-gradient(ellipse at center,
+      transparent 0, transparent 14px,
+      rgba(0, 0, 0, 0.16) 14px, rgba(0, 0, 0, 0.16) 15px),
+    repeating-linear-gradient(90deg,
+      transparent 0, transparent 24px,
+      rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 25px);
+  border-radius: 50%;
+  border: 4px solid var(--wood-dark);
+  box-shadow:
+    inset 0 0 0 2px var(--wood-warm),
+    inset 0 -8px 18px rgba(0, 0, 0, 0.55),
+    inset 0 6px 14px rgba(255, 200, 100, 0.08),
+    0 6px 0 var(--wood-darkest),
+    0 12px 22px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 4;
+}
+
+/* Stains */
+.table-stain {
+  position: absolute;
+  background: radial-gradient(ellipse, rgba(40, 16, 8, 0.65) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.table-stain--1 { top: 30px;    left: 60px;  width: 48px; height: 14px; }
+.table-stain--2 { bottom: 38px; right: 70px; width: 36px; height: 12px; }
+.table-stain--3 { top: 100px;   left: 30px;  width: 24px; height: 8px;  }
+
+/* Glasses on the table — top-down */
+.table-glass {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--wood-darkest);
+  box-shadow: inset 0 0 0 1px var(--neon-cream), 0 1px 0 rgba(0,0,0,0.5);
+  z-index: 5;
+}
+.table-glass--g1 { top: 26px;    left: 100px;  background: var(--amber); }
+.table-glass--g2 { top: 30px;    right: 80px;  background: var(--wood-mid); }
+.table-glass--g3 { bottom: 28px; left: 130px;  background: var(--amber); }
+
+/* Ashtray with cigarette */
+.table-ashtray {
+  position: absolute;
+  top: 38px;
+  right: 36px;
+  width: 24px;
+  height: 16px;
+  background: var(--wood-darkest);
+  border: 2px solid var(--wood-dark);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px var(--wood-mid);
+  z-index: 5;
+}
+.table-ashtray .table-cig {
+  position: absolute;
+  width: 11px;
+  height: 2px;
+  background: var(--paper);
+  top: 4px;
+  right: -2px;
+  transform: rotate(-15deg);
+}
+.table-ashtray .table-cig::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  width: 2px;
+  height: 2px;
+  background: #ff5a2c;
+}
+
+/* === My area (your seat at the bottom of main column) === */
+/* === Sua vez: "seu lugar no balcão" (avatar + caixa de escrita) === */
+.my-area {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: stretch;
+  background:
+    radial-gradient(120% 80% at 12% 0%, rgba(94,224,255,0.06), transparent 60%),
+    var(--wood-darkest);
+  padding: 18px 20px 16px;
+  z-index: 25;
+  flex-shrink: 0;
+  border-top: 3px solid transparent;
+  /* trilho de latão do balcão */
+  border-image: linear-gradient(90deg, var(--wood-dark), var(--amber-bright), var(--amber-dim), var(--amber-bright), var(--wood-dark)) 1;
+  box-shadow: inset 0 2px 0 rgba(255,200,100,0.12), 0 -10px 24px rgba(0,0,0,0.45);
+}
+
+/* Botão de expandir/recolher */
+.my-area-toggle {
+  position: absolute;
+  top: -14px;
+  right: 16px;
+  background: var(--wood-darkest);
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+  cursor: pointer;
+  z-index: 30;
+  transition: all 100ms ease-out;
+}
+.my-area-toggle:hover {
+  background: var(--neon-cyan);
+  color: var(--wood-darkest);
+}
+
+/* O assento do jogador (banquinho) */
+.my-seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding-right: 18px;
+  border-right: 1px dashed var(--wood-mid);
+  min-width: 92px;
+}
+.my-seat .pixel-avatar {
+  box-shadow: 0 0 0 2px var(--neon-cyan), 0 0 16px rgba(94,224,255,0.4);
+}
+.my-seat-tag {
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  color: var(--wood-darkest); background: var(--neon-cyan); padding: 2px 8px; line-height: 1;
+  margin-top: 2px;
+}
+.my-seat-name {
+  font-size: 12px; font-weight: 700; color: var(--neon-cream);
+  max-width: 96px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center;
+}
+
+.my-area-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.my-area-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.my-area-turn {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  color: var(--neon-cyan);
+}
+.my-area-turn::before { content: "▸ "; color: var(--amber-dim); }
+.my-area-turn--wait { color: var(--neon-purple); }
+
+.my-area-input {
+  display: flex;
+  align-items: stretch;
+  min-height: 0;
+}
+
+/* === EXPANDED MODE === */
+.my-area--expanded {
+  flex: 1;
+  min-height: 0;
+  grid-template-columns: 1fr;
+  padding-top: 30px;
+}
+
+.table-screen--expanded .bar-lamp,
+.table-screen--expanded .bar-halo,
+.table-screen--expanded .bar-counter {
+  display: none;
+}
+
+.my-area--expanded .my-area-toggle {
+  top: 8px;
+  right: 12px;
+}
+
+.my-area--expanded .my-area-input {
+  align-items: stretch;
+}
+
+
+@media (max-width: 1100px) {
+  .bar-stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 320px;
+  }
+  .bar-stage-side,
+  .conv-panel {
+    border-left: none !important;
+    border-top: 2px solid var(--amber);
+  }
+  .table-container { max-width: 480px; height: auto; }
+  .table-surface { max-width: 380px; height: 220px; }
+  .bar-stage-table { padding: 40px 16px 16px; }
+}
+
+@media (max-width: 720px) {
+  .my-area { grid-template-columns: 1fr; }
+  .my-seat {
+    flex-direction: row; justify-content: flex-start; gap: 10px;
+    border-right: none; border-bottom: 1px dashed var(--wood-mid);
+    padding-right: 0; padding-bottom: 10px; min-width: 0;
+  }
+}
+
+/* === Luminária sobre a mesa (foco de luz quente) === */
+.table-lamp {
+  position: absolute;
+  top: -4%; left: 50%;
+  width: 460px; height: 460px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 50% 38%,
+    rgba(255, 210, 120, 0.20) 0%,
+    rgba(240, 160, 32, 0.10) 28%,
+    transparent 62%);
+  pointer-events: none;
+  z-index: 1;
+}
+/* fio + cúpula da luminária */
+.table-lamp::before {
+  content: "";
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 2px; height: 46px; background: var(--wood-mid);
+}
+.table-lamp::after {
+  content: "";
+  position: absolute; top: 40px; left: 50%; transform: translateX(-50%);
+  width: 64px; height: 22px;
+  background: linear-gradient(180deg, var(--wood-dark), var(--wood-darkest));
+  border: 2px solid var(--wood-warm);
+  border-radius: 50% 50% 8px 8px / 80% 80% 8px 8px;
+  box-shadow: inset 0 -6px 10px rgba(255, 200, 100, 0.25), 0 0 22px rgba(240, 160, 32, 0.3);
+}
+@media (prefers-reduced-motion: reduce) { .table-lamp { transition: none; } }
+
+/* Poça de luz quente da luminária sobre o feltro */
+.table-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 40%, rgba(255, 210, 130, 0.14) 0%, transparent 58%);
+  pointer-events: none;
+  z-index: 6;
+}

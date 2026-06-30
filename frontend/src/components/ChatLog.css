@@ -1,0 +1,20 @@
+.chat-log-container {
+  width: 80%;
+  max-width: 500px;
+  height: 250px;
+  background-color: rgba(255, 255, 224, 0.9);
+  border: 2px solid #8B4513;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chat-message {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.chat-message strong {
+  color: #8B4513;
+}

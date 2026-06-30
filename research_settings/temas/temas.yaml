@@ -1,0 +1,63 @@
+# ===========================================================================
+# TEMAS DA MESA — organizados em NÍVEIS (do cotidiano ao especulativo).
+#
+# Cada *área* aqui representa um NÍVEL de complexidade/natureza do tema, em
+# ordem crescente de abstração/dificuldade. Cada *subtema* é a FRASE INICIAL
+# que abre a mesa (a pauta da noite). No jogo, sorteia-se uma área (nível) e,
+# dentro dela, um subtema.
+#
+# Ordem de complexidade (use como covariável/estratificador na análise):
+#   1 cotidiano  2 convivencia_social  3 filosofico
+#   4 tecnico_cientifico  5 complexo_sistemico  6 criativo_especulativo
+#
+# MANUTENÇÃO: este é o ÚNICO arquivo de temas. Mantém o schema antigo
+# (areas -> id/title/subtemas), então a plataforma 'live' continua lendo igual.
+# ===========================================================================
+areas:
+  # -- NÍVEL 1: COTIDIANO (prático, baixa abstração) ------------------------
+  - id: cotidiano
+    title: Cotidiano e vida prática
+    subtemas:
+      - "Como reduzir o desperdício de comida em casa?"
+      - "Um jeito de dormir melhor numa rotina corrida"
+      - "Como organizar as finanças do mês sem sofrer?"
+
+  # -- NÍVEL 2: CONVIVÊNCIA E SOCIEDADE -------------------------------------
+  - id: convivencia_social
+    title: Convivência e sociedade
+    subtemas:
+      - "Uma nova forma de as pessoas fazerem amizades na vida adulta"
+      - "Como tornar o transporte público da sua cidade mais usado?"
+      - "Como reduzir a sensação de solidão nas grandes cidades?"
+
+  # -- NÍVEL 3: FILOSÓFICO E ÉTICO (abstrato, sem resposta única) -----------
+  - id: filosofico
+    title: Questões filosóficas e éticas
+    subtemas:
+      - "O que torna uma vida bem vivida?"
+      - "Até que ponto vale sacrificar liberdade por segurança?"
+      - "É possível uma escolha verdadeiramente altruísta?"
+
+  # -- NÍVEL 4: TÉCNICO E CIENTÍFICO (conhecimento especializado) -----------
+  - id: tecnico_cientifico
+    title: Desafios técnicos e científicos
+    subtemas:
+      - "Como reduzir as alucinações de modelos de linguagem?"
+      - "Uma forma mais eficiente de armazenar energia renovável"
+      - "Como detectar desinformação gerada por IA em escala?"
+
+  # -- NÍVEL 5: COMPLEXO E SISTÊMICO (problemas 'wicked', multi-ator) -------
+  - id: complexo_sistemico
+    title: Problemas complexos e sistêmicos
+    subtemas:
+      - "Como uma cidade média pode se adaptar a eventos climáticos extremos?"
+      - "Um modelo justo de financiamento para a saúde pública"
+      - "Como alinhar incentivos econômicos à preservação ambiental?"
+
+  # -- NÍVEL 6: CRIATIVO E ESPECULATIVO (aberto, sem restrição de viabilidade)
+  - id: criativo_especulativo
+    title: Criação e especulação
+    subtemas:
+      - "Como seria uma cidade projetada para o ócio, e não para o trabalho?"
+      - "Invente um ritual novo para marcar a entrada na vida adulta"
+      - "Imagine uma forma de arte que só existe quando feita coletivamente"

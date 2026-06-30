@@ -1,0 +1,131 @@
+id: post_session_cocreation_v1
+version: 1.0.0
+moment: post_session
+title: Sobre a noite no bar
+description: >
+  Agora que a conversa terminou, queremos saber o que você sentiu e
+  pensou. Não tem resposta certa.
+
+sections:
+  - id: idea_quality
+    title: A ideia final
+    items:
+      - id: quality_overall
+        type: likert
+        question: Quão boa você considera a ideia final?
+        scale: 7
+        labels: ["Muito ruim", "Ruim", "Mais ou menos ruim", "Neutra", "Mais ou menos boa", "Boa", "Muito boa"]
+
+      - id: novelty
+        type: likert
+        question: Quão original/inesperada foi a ideia final?
+        scale: 5
+        labels: ["Óbvia", "Pouco original", "Mais ou menos", "Original", "Muito original"]
+
+      - id: usefulness
+        type: likert
+        question: Quão útil/aplicável você acha a ideia final?
+        scale: 5
+        labels: ["Inútil", "Pouco útil", "Mais ou menos", "Útil", "Muito útil"]
+
+      - id: ownership
+        type: slider
+        question: De 0 (foi tudo IA) a 100 (foi tudo eu), quanto você sente que a ideia final é SUA?
+        min: 0
+        max: 100
+        step: 1
+        default: 50
+        min_label: foi tudo a IA
+        max_label: foi tudo eu
+
+      - id: surprise
+        type: likert
+        question: A ideia final te surpreendeu?
+        scale: 5
+        labels: ["Nada", "Pouco", "Mais ou menos", "Sim", "Muito"]
+
+  - id: process
+    title: O processo
+    items:
+      - id: agency
+        type: likert
+        question: Você sentiu que tinha controle sobre o rumo da conversa?
+        scale: 5
+        labels: ["Nenhum controle", "Pouco", "Mais ou menos", "Bastante", "Total controle"]
+
+      - id: ai_contribution_quality
+        type: likert
+        question: Quão boas foram as contribuições das IAs (em geral)?
+        scale: 5
+        labels: ["Muito ruins", "Ruins", "Neutras", "Boas", "Muito boas"]
+
+      - id: best_persona
+        type: text_short
+        question: Qual persona contribuiu mais? (nome ou "nenhuma")
+        max_length: 40
+        required: false
+
+      - id: betting_meaningful
+        type: likert
+        question: Apostar dinheiro nas próprias propostas fez diferença pra você?
+        scale: 5
+        labels: ["Nenhuma diferença", "Pouca", "Alguma", "Bastante", "Muita"]
+
+      - id: contribution_aspects
+        type: multi_select
+        question: O que as IAs contribuíram mais? (selecione todas que se aplicam)
+        options:
+          - Trouxeram ideias novas
+          - Aprofundaram ideias minhas
+          - Questionaram suposições
+          - Provocaram com perguntas
+          - Resumiram bem
+          - Tornaram a conversa mais divertida
+          - Atrapalharam mais que ajudaram
+
+      - id: aspect_priority
+        type: ranking
+        question: O que mais importou nessa conversa pra você? (arraste pra ordenar)
+        options:
+          - Ter ideias novas
+          - Aprofundar uma ideia inicial
+          - Ser desafiado a pensar diferente
+          - Sair com algo concreto pra usar
+          - Só explorar / curtir o processo
+
+  - id: difficulties
+    title: Dificuldades
+    items:
+      - id: hard_to_keep_up
+        type: likert
+        question: Você se sentiu sobrecarregado em algum momento (ritmo, número de propostas, leitura)?
+        scale: 5
+        labels: ["Nada", "Pouco", "Mais ou menos", "Sim", "Muito"]
+
+      - id: ai_repetition
+        type: likert
+        question: Você sentiu que as IAs ficaram repetitivas?
+        scale: 5
+        labels: ["Nada", "Pouco", "Mais ou menos", "Sim", "Muito"]
+
+      - id: open_difficulties
+        type: text_long
+        question: O que mais te incomodou ou atrapalhou? (livre)
+        max_length: 500
+        required: false
+
+  - id: closing
+    title: Pra fechar
+    items:
+      - id: would_recommend
+        type: likert
+        question: Você recomendaria essa experiência pra um amigo?
+        scale: 5
+        labels: ["Nunca", "Provavelmente não", "Talvez", "Provavelmente sim", "Com certeza"]
+
+      - id: open_general
+        type: text_long
+        question: Algo mais que queira dizer? (totalmente livre)
+        placeholder: comentário, sugestão, observação
+        max_length: 1000
+        required: false

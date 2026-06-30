@@ -1,0 +1,44 @@
+services:
+  # Backend (FastAPI)
+  #
+  # Volumes montados read-only:
+  #   - prompts/, protocols/, research_settings/ vivem no host e são
+  #     consumidos pelo container. Editar no host = efeito imediato (sem
+  #     rebuild). Útil para iterar prompts e protocolos durante pesquisa.
+  #
+  # Volume read-write:
+  #   - data/ é onde o backend grava sessions/<id>/{events.jsonl,
+  #     llm_calls.jsonl, manifest.json, transcript.{json,md}, ...}
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+      - ./core:/repo/core:ro
+      - ./research_settings:/repo/research_settings:ro
+    environment:
+      MDB_DATA_DIR: /data
+      MDB_PROTOCOLS_DIR: /repo/core/protocols
+      MDB_PROMPTS_DIR: /repo/core/prompts
+      MDB_INSTRUMENTS_DIR: /repo/research_settings/instruments
+      MDB_STUDIES_DIR: /repo/core/studies
+      MDB_RESEARCH_DIR: /repo/research_settings
+      MDB_TEMAS_DIR: /repo/research_settings/temas
+      MDB_COMPOSICAO_MESA_DIR: /repo/research_settings/composicao_mesa
+      MDB_EMBED_BACKEND: ${MDB_EMBED_BACKEND:-google}
+      MDB_CONFIG_DIR: /repo/core/config
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+
+  # Frontend (Vite + nginx)
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000/api}
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

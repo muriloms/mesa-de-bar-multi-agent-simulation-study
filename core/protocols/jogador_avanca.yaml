@@ -1,0 +1,20 @@
+# Braço HUMAN-LED: a ideia escolhida pelo JOGADOR avança (não a do juiz).
+# Compara com 'default' (model-led) pra testar homogeneização (H2).
+id: jogador_avanca
+version: 3.0.0
+description: >
+  Human-led: a escolha do jogador avança pra mesa. Comparar com 'default'
+  (model-led) pra estudar diversidade do pool.
+language: pt
+rounds: 4
+quem_avanca: jogador
+source_blind_on_choice: true
+judge:
+  criterion: originalidade
+owner:
+  bias: neutral
+memory:
+  mode: reflected_summary
+instruments:
+  pre_session: pre_session_cocreation_v1
+  post_session: post_session_cocreation_v1

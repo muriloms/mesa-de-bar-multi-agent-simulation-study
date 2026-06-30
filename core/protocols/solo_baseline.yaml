@@ -1,0 +1,21 @@
+# Baseline: humano joga sozinho (0 IAs). Controle de criatividade individual.
+id: solo_baseline
+version: 3.0.0
+description: >
+  Humano sozinho na mesa (sem IAs). Baseline de criatividade individual.
+language: pt
+rounds: 4
+quem_avanca: jogador
+source_blind_on_choice: true
+judge:
+  criterion: originalidade
+owner:
+  bias: neutral
+memory:
+  mode: none
+display:
+  blind_personas: false
+  solo_baseline: true
+instruments:
+  pre_session: pre_session_cocreation_v1
+  post_session: post_session_cocreation_v1

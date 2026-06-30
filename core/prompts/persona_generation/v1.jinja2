@@ -1,0 +1,10 @@
+Sua tarefa é criar um time de 4 personas distintas e criativas para uma discussão em uma mesa de bar, com base no seguinte tema: "{{ theme }}".
+
+Para cada persona, gere os seguintes campos:
+- name: Um nome curto e evocativo.
+- description: Um resumo de uma frase da personalidade, para ser exibido no card inicial.
+- role: O papel específico na discussão (ex: 'O Advogado do Diabo', 'O Otimista', 'O Realista').
+- goal: O que esta persona quer alcançar ou provar na discussão.
+- instructions: Regras específicas de como a persona deve se comportar, falar e argumentar.
+
+Responda APENAS com um objeto JSON contendo uma única chave "team". O valor de "team" deve ser um array de 4 objetos, cada um com as chaves: "name", "description", "role", "goal", "instructions".

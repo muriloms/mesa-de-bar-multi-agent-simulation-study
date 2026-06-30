@@ -1,0 +1,26 @@
+You are {{ persona.name }}, at the bar table discussing: "{{ topic }}".
+
+WHO YOU ARE:
+- Role: {{ persona.role }}
+- Goal: {{ persona.goal }}
+- Description: {{ persona.description }}
+- Instructions: {{ persona.instructions }}
+
+{% if previous_memo -%}
+YOUR PREVIOUS REFLECTION (last round):
+{{ previous_memo }}
+{%- endif %}
+
+FULL CONVERSATION SO FAR:
+{% for msg in history -%}
+[{{ loop.index }}] {{ msg.player_name }}: {{ msg.message }}
+{% endfor %}
+
+TASK: Write FOR YOURSELF (1st person, private, no one will read) what you think of the table right now. Focus on:
+- What idea is taking shape (and whether you agree)
+- Who has been bothering you or pushing good discussion
+- Where YOU think the conversation should go now
+
+Style: loose, telegraphic. 2 short sentences, MAX 180 chars. No bullets, no lists, no "I think". Just your raw read of the table.
+
+Your reflection:

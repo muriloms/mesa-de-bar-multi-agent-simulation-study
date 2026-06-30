@@ -1,0 +1,85 @@
+# ===========================================================================
+# SIMULAÇÃO — DESENHO COMPLETO (A×B×C×D). REQUER OS 3 ITENS NOVOS DO RUNNER.
+# (model_pairing/model_map, judge_blind_follows_choice, yoked_seeds, juiz). Use simulacao.yaml para rodar JÁ (A×B×C).
+# Substitui o jogador humano por agente-jogador LLM e varre a matriz de
+# condições. Use plataforma.yaml com `mode: simulation` (ou rode via terminal).
+#
+# >>> RODE PRIMEIRO COM dry_run: true <<<  (conta sessões e estima custo).
+# Depois: piloto (1-2 sessões/célula) -> análise de poder -> estudo completo.
+# ===========================================================================
+
+run_id: null                 # null = gera id por data/hora
+seed: 20260629               # semente global (reprodutibilidade)
+n_games: 20                  # mesas por CÉLULA por jogador-sintético (ajuste por poder)
+
+# População sintética = 9 jogadores (3 personas × 3 temperaturas), CRUZADOS.
+# São as unidades de replicação / efeito aleatório na análise.
+jogadores: [cauteloso_t04, cauteloso_t07, cauteloso_t10, equilibrado_t04, equilibrado_t07, equilibrado_t10, ousado_t04, ousado_t07, ousado_t10]
+
+# ---------------------------------------------------------------------------
+# MATRIZ DE CONDIÇÕES — produto cartesiano. Cada combinação é uma "célula".
+# ---------------------------------------------------------------------------
+condicoes:
+  # FATOR B — dinâmica de decisão (locus de controle). Peça central (RQ2/H2).
+  best_idea: [judge, player, player_decides]
+
+  # FATOR A — composição da mesa (RQ1/H1).
+  composicao: [comum, celebridade]
+
+  # FATOR C — cegueira de fonte na ESCOLHA do jogador (RQ3/H3).
+  # Acoplado à cegueira do JUIZ via 'judge_blind_follows_choice' (abaixo),
+  # para C ser UM fator de 2 níveis (anonima = ambos true; identificada = ambos false).
+  source_blind_on_choice: [true, false]
+
+  # FATOR D — pareamento de MODELOS por papel (RQ5/H5). *** EIXO NOVO ***
+  # Só OpenAI disponível -> testa o artefato "MESMO modelo em todos os assentos"
+  # (same_model) vs "modelos OpenAI DIFERENTES por papel" (cross_model).
+  # O pareamento entre FORNECEDORES distintos fica como limitação/trabalho futuro.
+  model_pairing: [same_model, cross_model]
+
+  # CONTROLE — tema balanceado entre células; tratado como efeito ALEATÓRIO.
+  # 6 temas = 1 por NÍVEL de complexidade (cotidiano -> especulativo), o que
+  # também permite testar 'complexidade do tema' como moderador na análise.
+  # Mapa de ids: t1 cotidiano | t2 convivencia | t3 filosofico | t4 tecnico |
+  #              t5 sistemico | t6 criativo. Se o runner resolver por id, use [t1..t6].
+  tema: ["Como reduzir o desperdício de comida em casa?", "Uma nova forma de as pessoas fazerem amizades na vida adulta", "O que torna uma vida bem vivida?", "Como reduzir as alucinações de modelos de linguagem?", "Como uma cidade média pode se adaptar a eventos climáticos extremos?", "Como seria uma cidade projetada para o ócio, e não para o trabalho?"]
+
+  # CONTROLES fixos no núcleo (sweep como robustez, em execução à parte).
+  rounds: [6]                       # R=6 no núcleo; robustez: [4, 6, 8]
+  judge_criterion: [composto]       # fixo; robustez: outros critérios
+
+# ---------------------------------------------------------------------------
+# FATOR D — mapa de modelos por papel. *** REQUER SUPORTE NOVO DO RUNNER ***
+# Atribui o modelo de cada papel (personas da mesa / juiz / jogador-agente).
+# Apenas OpenAI. Confirme quais modelos você tem acesso e ajuste os nomes.
+# ---------------------------------------------------------------------------
+model_map:
+  same_model:                                  # mesmo modelo em todos os papéis
+    personas: { provider: openai, model: gpt-4o-mini }
+    judge:    { provider: openai, model: gpt-4o-mini }
+    player:   { provider: openai, model: gpt-4o-mini }
+  cross_model:                                 # modelos OpenAI DIFERENTES por papel
+    personas: { provider: openai, model: gpt-4o-mini }   # (CONFIRMAR modelos
+    judge:    { provider: openai, model: gpt-4o }        #  OpenAI disponíveis
+    player:   { provider: openai, model: gpt-4.1-mini }  #  na sua conta)
+
+# ---------------------------------------------------------------------------
+# Acoplamento do Fator C: a cegueira do JUIZ segue a cegueira da ESCOLHA.
+# true  -> judge_blind_to_source = source_blind_on_choice (C = 2 níveis -> 24 células)
+# false -> separe em C-juiz × C-escolhedor (2×2) adicionando judge_blind_to_source
+# *** REQUER SUPORTE NOVO DO RUNNER (acoplar os dois flags) ***
+judge_blind_follows_choice: true
+
+# ---------------------------------------------------------------------------
+# Pareamento de seeds (yoked) — ganho de poder (opcional, recomendado).
+# Reusa tema + personas amostradas + propostas iniciais entre níveis dos
+# fatores listados, mudando só a manipulação. *** SUPORTE NOVO DO RUNNER ***
+# ---------------------------------------------------------------------------
+yoked_seeds: [source_blind_on_choice, model_pairing]
+
+
+formularios: "off"           # sessões simuladas não respondem instrumentos
+output_dir: data/sim_runs    # separado fisicamente dos dados humanos
+mark_synthetic: true         # grava 'simulated: true' em cada sessão
+dry_run: true                # << COMECE EM true: só conta sessões e estima custo
+max_parallel: 8              # sessões simultâneas (custo/limite de taxa)

@@ -1,0 +1,64 @@
+.sim {
+  min-height: 100vh;
+  background: var(--wood-darkest);
+  color: var(--text-warm);
+  font-family: var(--font-mono);
+  padding: 28px clamp(16px, 5vw, 56px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.sim-head { border-bottom: 1px solid var(--wood-mid); padding-bottom: 16px; margin-bottom: 20px; }
+.sim-eyebrow { margin: 0; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--neon-purple); }
+.sim-title { margin: 4px 0 2px; font-size: 24px; color: var(--paper); letter-spacing: 1px; }
+.sim-sub { margin: 0; font-size: 13px; color: var(--text-dim); }
+.sim-error { color: var(--neon-pink); }
+.sim-muted { color: var(--text-dim); }
+
+.sim-card { background: var(--wood-dark); border: 1px solid var(--wood-mid); padding: 18px; margin-bottom: 16px; }
+.sim-card h2 { margin: 0 0 12px; font-size: 15px; color: var(--amber); text-transform: uppercase; letter-spacing: 1px; }
+
+.sim-fields { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.sim-field { display: flex; flex-direction: column; gap: 5px; }
+.sim-field span { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+.sim-field input { background: var(--wood-darkest); border: 1px solid var(--wood-mid); color: var(--paper); font-family: inherit; font-size: 15px; padding: 8px 10px; width: 120px; }
+.sim-check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-warm); cursor: pointer; }
+
+.sim-estimate { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--wood-mid); }
+.sim-stat { display: flex; flex-direction: column; }
+.sim-stat b { font-size: 22px; color: var(--neon-cyan); }
+.sim-stat span { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+
+.sim-cond { display: flex; flex-direction: column; gap: 6px; }
+.sim-cond-row { display: flex; gap: 12px; align-items: baseline; }
+.sim-cond-key { min-width: 180px; font-size: 12px; color: var(--amber-dim); text-transform: uppercase; letter-spacing: 0.5px; }
+.sim-cond-val { font-size: 13px; color: var(--paper); }
+.sim-note, .sim-out { font-size: 11px; color: var(--text-darker); margin: 10px 0 0; }
+
+.sim-players { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.sim-player { background: var(--wood-darkest); border: 1px solid var(--wood-mid); padding: 12px; }
+.sim-player-head { display: flex; justify-content: space-between; align-items: baseline; }
+.sim-player-name { font-size: 13px; font-weight: 800; color: var(--neon-cream); }
+.sim-player-temp { font-size: 11px; color: var(--amber); }
+.sim-player-desc { font-size: 11px; color: var(--text-dim); margin: 6px 0; line-height: 1.4; }
+.sim-player-traits { display: flex; flex-wrap: wrap; gap: 5px; }
+.sim-trait { font-size: 10px; color: var(--text-warm); background: var(--wood-mid); padding: 2px 6px; }
+.sim-trait b { color: var(--amber-bright); }
+
+.sim-start {
+  background: transparent; border: 2px solid var(--neon-cyan); color: var(--neon-cyan);
+  font-family: inherit; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+  padding: 14px 22px; cursor: pointer; transition: all 120ms ease-out; margin-top: 4px;
+}
+.sim-start:hover { background: var(--neon-cyan); color: var(--wood-darkest); box-shadow: 0 0 18px rgba(94,224,255,0.4); }
+
+.sim-progress .sim-run { font-size: 12px; color: var(--text-dim); }
+.sim-status { font-weight: 700; letter-spacing: 1px; margin: 8px 0; }
+.sim-status--running { color: var(--amber-bright); }
+.sim-status--done { color: var(--neon-cyan); }
+.sim-status--error { color: var(--neon-pink); }
+.sim-bar { height: 14px; background: var(--wood-darkest); border: 1px solid var(--wood-mid); overflow: hidden; }
+.sim-bar-fill { height: 100%; background: linear-gradient(90deg, var(--amber), var(--amber-bright)); transition: width 300ms ease-out; }
+.sim-count { font-size: 13px; color: var(--paper); margin: 8px 0 0; }
+.sim-current { font-size: 12px; color: var(--text-dim); margin: 4px 0 0; }
+.sim-errs { margin-top: 10px; }
+.sim-err { font-size: 11px; color: var(--neon-pink); margin: 2px 0; }

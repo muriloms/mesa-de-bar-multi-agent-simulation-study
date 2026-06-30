@@ -1,0 +1,45 @@
+# Preços dos modelos LLM em USD por 1M tokens.
+# Fonte: páginas oficiais dos provedores (validar antes de publicar).
+# Edite aqui sem precisar rebuildar — o backend recarrega no /costs.
+#
+# Format:
+#   <provider>:
+#     <model>:
+#       in:  USD por 1M tokens de entrada (prompt)
+#       out: USD por 1M tokens de saída (completion)
+
+google:
+  gemini-1.5-flash:
+    in: 0.075
+    out: 0.30
+  gemini-1.5-pro:
+    in: 1.25
+    out: 5.00
+  gemini-2.0-flash:
+    in: 0.10
+    out: 0.40
+  gemini-2.0-flash-exp:
+    in: 0.0
+    out: 0.0  # gratuito durante experimental
+
+openai:
+  gpt-4o:
+    in: 2.50
+    out: 10.00
+  gpt-4o-mini:
+    in: 0.15
+    out: 0.60
+  gpt-4-turbo:
+    in: 10.00
+    out: 30.00
+  o1-preview:
+    in: 15.00
+    out: 60.00
+  o1-mini:
+    in: 3.00
+    out: 12.00
+
+# Fallback genérico se modelo desconhecido
+_default:
+  in: 1.0
+  out: 3.0

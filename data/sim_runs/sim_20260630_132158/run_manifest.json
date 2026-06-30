@@ -1,0 +1,9 @@
+{
+  "run_id": "sim_20260630_132158",
+  "dry_run": true,
+  "cells": 72,
+  "jogadores": 9,
+  "n_games": 1,
+  "total_sessions": 648,
+  "approx_llm_calls": 27864
+}

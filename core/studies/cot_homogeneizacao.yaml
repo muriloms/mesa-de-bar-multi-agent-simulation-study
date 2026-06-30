@@ -1,0 +1,27 @@
+# Estudo focado: efeito do CoT das personas na homogeneização do pool.
+# Braços: default (direto) vs default_cot (raciocínio antes de propor).
+# Composição fixa (pessoas comuns) pra isolar o efeito do CoT.
+id: cot_homogeneizacao
+title: CoT e homogeneização
+description: >
+  Isola o efeito do CoT das personas (default vs default_cot) sobre a
+  diversidade/originalidade do pool de ideias. Composição fixa (pessoas comuns),
+  mesmo banco de tópicos. Atribuição balanceada, single-blind.
+
+arms:
+  - default
+  - default_cot
+
+compositions:
+  - pessoas_comuns_brasil
+
+assignment: balanced
+blind_condition: true
+
+topics:
+  - "Como tornar o transporte público da sua cidade mais usado?"
+  - "Uma nova forma de as pessoas fazerem amizades na vida adulta"
+  - "Como reduzir o desperdício de comida em casa"
+  - "Um jeito melhor de aprender uma habilidade nova sozinho"
+  - "Como deixar um parque público mais vivo à noite"
+  - "Uma forma de as pessoas pouparem dinheiro sem sofrer"

@@ -1,0 +1,63 @@
+.act-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 14px;
+  background: var(--wood-darkest);
+  border-bottom: 2px solid var(--amber);
+  z-index: 25;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.act-brand {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--amber);
+  text-transform: uppercase;
+}
+.act-brand-b {
+  color: var(--neon-pink);
+  text-shadow: 0 0 4px rgba(255, 90, 140, 0.6);
+}
+
+.act-bar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+.act-step {
+  padding: 4px 9px;
+  color: var(--text-dim);
+  border: 1px solid transparent;
+}
+.act-step--on {
+  color: var(--amber);
+  border: 1px dashed var(--amber);
+}
+
+.act-pill {
+  padding: 4px 10px;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  background: rgba(94, 224, 255, 0.06);
+}
+
+/* Pips de progresso das rodadas */
+.act-pips { display: inline-flex; gap: 5px; align-items: center; margin-left: 2px; }
+.act-pip {
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 1px solid var(--amber-dim); background: transparent;
+}
+.act-pip--on { background: var(--amber); border-color: var(--amber); }
+.act-pip--cur {
+  background: var(--amber-bright); border-color: var(--amber-bright);
+  box-shadow: 0 0 8px rgba(255,200,80,0.7);
+}

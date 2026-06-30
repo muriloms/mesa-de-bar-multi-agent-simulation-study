@@ -1,0 +1,22 @@
+# Personas mascaradas como "Persona A/B/C/D" pro humano durante a sessão.
+id: blind_personas
+version: 3.0.0
+description: >
+  Anonimização de antropomorfização: personas viram "Persona A/B..." pro
+  humano (dados internos preservados).
+language: pt
+rounds: 4
+quem_avanca: juiz_ia
+source_blind_on_choice: true
+judge:
+  criterion: originalidade
+owner:
+  bias: neutral
+memory:
+  mode: reflected_summary
+display:
+  blind_personas: true
+  solo_baseline: false
+instruments:
+  pre_session: pre_session_cocreation_v1
+  post_session: post_session_cocreation_v1

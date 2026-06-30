@@ -1,0 +1,120 @@
+@import "./styles/theme.css";
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: var(--text-warm);
+  background-color: var(--wood-darkest);
+  /* Floor of the bar — dark wood tile */
+  background-image:
+    repeating-linear-gradient(0deg,
+      #2d1408 0, #2d1408 16px,
+      #180806 16px, #180806 17px,
+      #0e0604 17px, #0e0604 18px),
+    repeating-linear-gradient(90deg,
+      transparent 0, transparent 38px,
+      rgba(0, 0, 0, 0.55) 38px, rgba(0, 0, 0, 0.55) 40px);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Subtle CRT scanlines globally — REMOVIDO. Estava prejudicando leitura.
+   Atmosfera retro vem das cores, tipografia mono e elementos visuais
+   (lâmpada, balcão, neon), não de filtros sobre texto. */
+
+/* Buttons / inputs base */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--amber);
+  color: var(--amber);
+  padding: 8px 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 80ms ease-out;
+}
+button:hover:not(:disabled) {
+  background: var(--amber);
+  color: var(--wood-darker);
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--wood-mid);
+  color: var(--text-dim);
+}
+button:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  background: var(--wood-darkest);
+  border: 1px solid var(--wood-mid);
+  color: var(--text-warm);
+  padding: 8px 10px;
+  font-size: 13px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--amber);
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.45;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+h1 { font-size: 20px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+
+/* Util */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* Smooth keyframes shared */
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  3% { opacity: 0.4; }
+  5% { opacity: 1; }
+  45% { opacity: 1; }
+  47% { opacity: 0.5; }
+  48% { opacity: 1; }
+}
+@keyframes pulse-purple {
+  0%, 100% { box-shadow: inset 0 0 0 0 rgba(199, 155, 240, 0); }
+  50%      { box-shadow: inset 0 0 0 2px rgba(199, 155, 240, 0.5); }
+}
