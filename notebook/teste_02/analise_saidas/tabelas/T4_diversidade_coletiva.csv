@@ -1,0 +1,19 @@
+cell_best_idea,cell_tema,n_sessions,n_winners,collective_div
+judge,Como reduzir as alucinações de modelos de linguagem?,6,18,0.3221140295316606
+judge,Como reduzir o desperdício de comida em casa?,6,18,0.41392625884718043
+judge,"Como seria uma cidade projetada para o ócio, e não para o trabalho?",6,18,0.2753021370470245
+judge,Como uma cidade média pode se adaptar a eventos climáticos extremos?,6,18,0.3713056268562131
+judge,O que torna uma vida bem vivida?,6,18,0.44128693456578477
+judge,Uma nova forma de as pessoas fazerem amizades na vida adulta,6,18,0.30349446748655295
+player,Como reduzir as alucinações de modelos de linguagem?,6,18,0.32772451058892105
+player,Como reduzir o desperdício de comida em casa?,6,18,0.28083364917023984
+player,"Como seria uma cidade projetada para o ócio, e não para o trabalho?",6,18,0.16341302182722053
+player,Como uma cidade média pode se adaptar a eventos climáticos extremos?,6,18,0.26982846672551164
+player,O que torna uma vida bem vivida?,6,18,0.35131670756101835
+player,Uma nova forma de as pessoas fazerem amizades na vida adulta,6,18,0.3230340744170936
+player_decides,Como reduzir as alucinações de modelos de linguagem?,6,18,0.2955778226835601
+player_decides,Como reduzir o desperdício de comida em casa?,6,18,0.3090607421332544
+player_decides,"Como seria uma cidade projetada para o ócio, e não para o trabalho?",6,18,0.23049259689020318
+player_decides,Como uma cidade média pode se adaptar a eventos climáticos extremos?,6,18,0.33623582659931955
+player_decides,O que torna uma vida bem vivida?,6,18,0.29221930398113505
+player_decides,Uma nova forma de as pessoas fazerem amizades na vida adulta,6,18,0.31113193008817297

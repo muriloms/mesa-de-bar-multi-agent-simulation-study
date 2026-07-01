@@ -60,6 +60,10 @@ class Simulacao(BaseModel):
     mark_synthetic: bool = True
     dry_run: bool = False
     max_parallel: int = Field(default=1, ge=1)
+    # --- Integridade (itens 1-2) ---
+    player_call_attempts: int = Field(default=3, ge=1)   # retries por chamada do jogador
+    abort_if_fail_rate_over: float = 0.02                # aborta o run se a taxa de sessões inválidas passar disso
+    min_sessions_before_abort_check: int = 10            # só checa após N sessões
 
     @field_validator("formularios", mode="before")
     @classmethod

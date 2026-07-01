@@ -1,0 +1,27 @@
+# ===========================================================================
+# SIMULAÇÃO — RUN ÚNICO E DEFINITIVO PARA O ARTIGO
+# Idêntico ao simulacao_artigo.yaml (best_idea × 6 temas, 3 jogadores,
+# n_games=2), MUDANDO APENAS rounds: 3 -> 6. Um só run, um só R, para TODAS as
+# análises: RQ2 (diversidade coletiva), RQ4 (convergência), autoria e engenharia.
+# Substitui a necessidade de ter dois runs (R=3 + R=6).
+# ===========================================================================
+
+run_id: null
+seed: 20260629
+n_games: 2                   # 6 sessões por (dinâmica × tema) -> RQ2 estável
+
+jogadores: [cauteloso_t07, equilibrado_t07, ousado_t07]
+
+condicoes:
+  best_idea: [judge, player, player_decides]   # FATOR B — pergunta central (RQ2)
+  composicao: [comum]                          # fixo
+  source_blind_on_choice: [true]               # fixo (anonima)
+  rounds: [6]                                  # <<< R=6 (única mudança vs. o run anterior)
+  judge_criterion: [composto]                  # fixo
+  tema: ["Como reduzir o desperdício de comida em casa?", "Uma nova forma de as pessoas fazerem amizades na vida adulta", "O que torna uma vida bem vivida?", "Como reduzir as alucinações de modelos de linguagem?", "Como uma cidade média pode se adaptar a eventos climáticos extremos?", "Como seria uma cidade projetada para o ócio, e não para o trabalho?"]
+
+formularios: "off"
+output_dir: data/sim_runs
+mark_synthetic: true
+dry_run: true                # confirme o plan; depois mude p/ false
+max_parallel: 4

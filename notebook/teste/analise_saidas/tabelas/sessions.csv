@@ -1,0 +1,271 @@
+session_id,run_id,player_persona,player_temperature,topic,n_rounds,status,provider,model,seed,simulated,n_ideas,n_calls,tokens_in,tokens_out,cost_usd,latency_ms_total,n_failures,winners_player,winners_persona,match_rate,final_summary,synth_chars,cell_best_idea,cell_composicao,cell_tema,cell_source_blind,cell_judge_criterion,cell_model_pairing,cell_rounds,cell_id,pool_div,mean_orig,flexibility,conv_slope,synth_orig_vs_pool
+20260630-133248_b92d5719,sim_20260630_133248,cauteloso_t04,0.4,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1278491942,True,15,28,13942,1800,0.0031712999999999997,43269,0,1,2,0.3333333333333333,"# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa
+
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à tona várias estratégias práticas e criativas que podem ser implementadas no dia a dia, mesmo diante de rotinas corridas. A seguir, apresentamos os pontos chave e as conclusões da conversa.
+
+## 1. Planejamento de Refeições
+
+- **Calendário Semanal de Refeições**: A proposta de criar um calendário semanal ajuda a planejar o que cozinhar e comprar. Isso é essencial para evitar a compra excessiva de alimentos e garante que os itens da despensa sejam utilizados antes de estragarem.
+
+## 2. Uso Eficiente das Sobras
+
+- **Congelamento de Sobras**: Para aqueles que têm uma rotina agitada, congelar sobras é uma solução prática. Essa técnica não apenas economiza tempo, mas também minimiza o desperdício, permitindo que os alimentos sejam consumidos em outra ocasião.
+
+## 3. Criatividade na Cozinha
+
+- **Aplicativos de Receitas**: Utilizar aplicativos que sugerem receitas com base nos ingredientes disponíveis em casa é uma excelente forma de estimular a criatividade na cozinha. Isso ajuda a transformar ingredientes que poderiam ser desperdiçados em pratos saborosos e inovadores.
+
+## Conclusão
+
+Reduzir o desperdício de comida em casa é uma tarefa que pode ser facilitada por meio de estratégias simples, como o planejamento de refeições, o congelamento de sobras e o uso de tecnologia para inspirar novas receitas. Implementar essas práticas não só contribui para a economia doméstica, mas também promove um estilo de vida mais sustentável. Com pequenas mudanças, é possível fazer uma grande diferença na redução do desperdício alimentar.",1678,judge,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=judge|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.3364049739116286,0.3838550599503454,6,0.007604034712969386,0.35350700756760045
+20260630-133313_d95b8327,sim_20260630_133248,cauteloso_t04,0.4,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,977396083,True,15,28,14160,1853,0.0032357999999999996,46086,0,2,1,0.6666666666666666,"# Resumo Final da Ideia: Como Reduzir o Desperdício de Comida em Casa
+
+## Introdução
+A redução do desperdício de comida em casa é uma preocupação crescente, tanto por questões econômicas quanto ambientais. Durante a discussão, foram apresentadas soluções práticas que podem ser implementadas no cotidiano para otimizar o uso dos alimentos e minimizar perdas.
+
+## Pontos Chave
+
+### 1. Planejamento de Compras
+- **Importância do Planejamento**: O planejamento é fundamental para evitar compras desnecessárias e garantir que os alimentos sejam consumidos antes de estragarem.
+- **Uso de Tecnologia**: Aplicativos de gerenciamento de alimentos podem ser ferramentas valiosas para monitorar itens na despensa e organizar as compras de forma mais eficiente.
+
+### 2. Criação de um Calendário de Refeições
+- **Organização Semanal**: Criar um calendário de refeições permite planejar o que cozinhar com os ingredientes já disponíveis em casa, reduzindo a probabilidade de desperdício.
+- **Maximização dos Ingredientes**: Ao planejar as refeições, é possível utilizar todos os ingredientes antes que se estraguem, aproveitando ao máximo o que foi comprado.
+
+## Conclusões
+A combinação de planejamento cuidadoso nas compras e o uso de tecnologia, juntamente com a criação de um calendário de refeições, pode levar a uma significativa redução no desperdício de alimentos em casa. Essas práticas não só ajudam a economizar dinheiro, mas também contribuem para um estilo de vida mais sustentável. Ao adotar essas estratégias, podemos transformar a maneira como lidamos com os alimentos em nossas casas, promovendo um consumo mais consciente e responsável.",1641,judge,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=judge|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.422525545107821,0.4250515763186293,6,-0.03908470621852406,0.46754387822540244
+20260630-133340_e8f70231,sim_20260630_133248,ousado_t10,1.0,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,61814544,True,15,28,14145,1912,0.0032689499999999996,41712,0,1,2,0.3333333333333333,"# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa
+
+## Introdução
+A redução do desperdício de comida em casa é um tema que vai além da praticidade; é um reflexo de consciência social e ambiental. A conversa entre Bia e Jogador Ousado trouxe à tona diversas estratégias que podem ser implementadas para minimizar esse problema, promovendo um futuro mais sustentável e colaborativo.
+
+## Pontos Chave da Discussão
+
+1. **Conscientização e Práticas Sustentáveis**
+   - A redução do desperdício é um ato de responsabilidade individual e coletiva.
+   - A utilização de aplicativos de troca de comida e receitas que aproveitam sobras é uma tendência crescente, demonstrando que é possível ser sustentável mesmo em tempos de crise financeira.
+
+2. **Inovação Social: O ""Carnaval de Caducidade""**
+   - A proposta de Jogador Ousado de criar um evento mensal onde amigos e vizinhos cozinham juntos com ingredientes próximos da data de validade é uma forma criativa de transformar o desperdício em uma celebração.
+   - Esse evento não apenas promove a reutilização de alimentos, mas também reforça os laços comunitários e a criatividade na cozinha.
+
+3. **Colaboração e Acessibilidade**
+   - Bia destacou a importância de usar as redes sociais para divulgar o ""carnaval de caducidade"" e realizar colaborações com marcas locais.
+   - A união da comunidade pode facilitar o acesso a recursos e incentivar a participação ativa de mais pessoas na luta contra o desperdício.
+
+## Conclusão
+A discussão sobre como reduzir o desperdício de comida em casa revela que a conscientização e a criatividade são fundamentais. Iniciativas como o ""carnaval de caducidade"" não só promovem a reutilização de alimentos, mas também fortalecem as conexões sociais e a colaboração comunitária. Ao adotar práticas sustentáveis e inovadoras, podemos sonhar com um futuro mais consciente e acessível para todos.",1886,judge,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=judge|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.47328244199487285,0.4616999072250429,3,-0.05144990667160523,0.4946568951370506
+20260630-133405_f0096d5a,sim_20260630_133248,ousado_t10,1.0,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,2051983750,True,15,28,14844,1947,0.0033948,43327,0,3,0,1.0,"# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa
+
+## Introdução
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à luz várias ideias criativas e interativas que podem transformar a maneira como lidamos com os alimentos. Abaixo, estão sintetizados os pontos-chave da conversa, que destacam a importância de inovar na cozinha e envolver a comunidade no processo.
+
+## 1. Calendário Alimentar Interativo
+- **Conceito**: Criar um calendário que atribui a cada alimento uma ""data de validade divertida"".
+- **Funcionalidade**: Cada etiqueta, como ""Dia da Recriação"", serve como um lembrete para cozinhar pratos criativos.
+- **Objetivo**: Incentivar a inventividade na cozinha e transformar sobras em novas receitas.
+
+## 2. Dia da Comida Esquecida
+- **Conceito**: Designar um dia da semana para cozinhar exclusivamente com ingredientes prestes a vencer.
+- **Funcionalidade**: Aproveitar esses alimentos para criar pratos inovadores e deliciosos.
+- **Objetivo**: Reduzir o desperdício de forma divertida, transformando o ato de cozinhar em um verdadeiro desafio gastronômico.
+
+## 3. Armário dos Últimos Dias
+- **Conceito**: Montar uma prateleira visível que reúna todos os alimentos próximos da data de validade.
+- **Funcionalidade**: Transformar a utilização desses ingredientes em um desafio semanal, convidando amigos a participar.
+- **Objetivo**: Estimular a criatividade culinária e criar um senso de comunidade em torno da redução do desperdício.
+
+## Conclusão
+As ideias apresentadas não apenas visam reduzir o desperdício de comida, mas também transformam o ato de cozinhar em uma experiência divertida e colaborativa. Ao criar desafios e envolver amigos, podemos mudar a forma como percebemos e utilizamos os alimentos em casa. Implementar essas práticas pode resultar em uma cozinha mais sustentável e inovadora, contribuindo para um futuro com menos desperdício.",1902,judge,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=judge|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.43059093281425537,0.4390595776659433,3,-0.08930574429516287,0.4381477983801346
+20260630-133430_4c638559,sim_20260630_133248,cauteloso_t04,0.4,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,360507124,True,15,28,14092,2023,0.0033275999999999996,43975,0,2,1,0.0,"# Resumo Final da Ideia: Redução do Desperdício de Comida em Casa
+
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à tona várias estratégias práticas e relevantes, que podem ser adotadas por famílias para otimizar o uso de alimentos e minimizar perdas. Abaixo, estão os pontos chave, as reviravoltas e as conclusões principais da conversa.
+
+## Pontos Chave
+
+1. **Planejamento Semanal de Refeições**:
+   - Criar um cardápio semanal baseado nos ingredientes já disponíveis em casa.
+   - Essa prática ajuda a evitar compras desnecessárias e assegura que os alimentos sejam consumidos antes de estragarem.
+
+2. **Calendário de Consumo**:
+   - Manter um registro das datas de validade dos alimentos.
+   - Planejar as refeições da semana priorizando o consumo de itens que estão mais próximos do vencimento, garantindo que sejam utilizados antes de se tornarem impróprios para o consumo.
+
+3. **Consumo Consciente**:
+   - A importância de reduzir a quantidade de compras, focando no uso dos itens já existentes.
+   - Evitar o excesso de alimentos é fundamental; a ação deve ser proativa para prevenir o desperdício, não reativa.
+
+## Reviravoltas
+
+- **Desafio do Dia a Dia**: Embora o planejamento seja eficaz, a realidade de muitas pessoas é a falta de tempo para organizar refeições. Isso levanta a necessidade de soluções práticas que não dependam de planejamento complexo.
+  
+- **Foco na Redução de Compras**: A ideia de que o primeiro passo deve ser a diminuição da quantidade de alimentos comprados foi um ponto importante, refletindo a percepção de que muitas vezes a solução está em evitar a compra excessiva.
+
+## Conclusões
+
+Para reduzir o desperdício de comida em casa, é essencial que as famílias adotem uma combinação de planejamento e consumo consciente. Aqui estão as recomendações finais:
+
+- **Criação de um Cardápio Semanal**: Utilize o que já está disponível em casa para criar refeições, evitando assim a compra de novos itens desnecessários.
+  
+- **Implementação de um Calendário de Consumo**: Registre as datas de validade e organize as refeições para garantir que os alimentos sejam utilizados a tempo.
+
+- **Redução de Compras**: Esteja ciente das quantidades adquiridas, evitando o acúmulo de alimentos que podem levar ao desperdício.
+
+Essas práticas não apenas ajudam a minimizar o desperdício de comida, mas também promovem uma abordagem mais sustentável e consciente em relação à alimentação familiar.",2439,player,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.38480293369833163,0.39958935634920756,6,0.0008664704774308748,0.39564443464475796
+20260630-133456_18a27225,sim_20260630_133248,cauteloso_t04,0.4,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1028990061,True,15,28,13923,1935,0.0032494499999999996,47172,0,2,1,0.6666666666666666,"# Resumo Final da Ideia: Redução do Desperdício de Comida em Casa
+
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à tona estratégias valiosas que podem ser implementadas no dia a dia. Abaixo, estão sintetizados os pontos chave, reviravoltas e conclusões da conversa.
+
+## Pontos Chave
+
+1. **Planejamento Semanal de Refeições**:
+   - Criar um planejamento semanal ajuda a organizar as refeições e a lista de ingredientes necessários.
+   - A compra de apenas itens que serão efetivamente usados reduz a probabilidade de compras excessivas e, consequentemente, o desperdício.
+
+2. **Uso de Ingredientes Existentes**:
+   - Antes de comprar novos produtos, utilizar os ingredientes que já estão disponíveis em casa é fundamental. Isso não só evita o desperdício, mas também incentiva a criatividade na cozinha.
+   - A prática de fazer sopas e misturas com sobras é uma excelente maneira de transformar restos em pratos saborosos, aproveitando ao máximo o que já foi adquirido.
+
+3. **Elaboração de Listas Personalizadas**:
+   - Cada membro da casa pode contribuir elaborando uma lista de pratos que gostaria de cozinhar, utilizando os ingredientes que já possuem. Essa abordagem não só promove a colaboração, mas também garante que os alimentos sejam consumidos antes de estragarem.
+
+## Reviravoltas
+
+- A discussão começou com a ideia de planejamento, mas rapidamente se transformou em uma reflexão sobre a importância de utilizar o que já temos em casa. 
+- O relato de Seu Raimundo sobre fazer sopas com sobras trouxe uma nova perspectiva, mostrando que é possível criar refeições saborosas e nutritivas a partir de restos, mudando a forma como vemos os alimentos que podem ser considerados ""desperdício"".
+
+## Conclusões
+
+A redução do desperdício de comida em casa pode ser alcançada através de um planejamento eficaz e da valorização dos ingredientes existentes. Implementar um sistema onde se prioriza o uso de sobras e se elabora um planejamento semanal de refeições permitirá não apenas a diminuição do desperdício, mas também a criação de refeições diversificadas e saborosas. Adotar essas práticas em conjunto pode transformar a maneira como gerenciamos nossa alimentação, promovendo um estilo de vida mais sustentável e econômico.",2253,player,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.38800504573138583,0.41036911046953006,8,-0.024724027424413937,0.37511925565457527
+20260630-133525_4cf06abe,sim_20260630_133248,ousado_t10,1.0,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1882031939,True,15,28,14426,1992,0.0033591,45965,0,3,0,0.6666666666666666,"# Resumo Final da Ideia: Redução do Desperdício de Comida em Casa
+
+## Introdução
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à tona várias ideias criativas e inovadoras. Abaixo, apresentamos os pontos principais e as propostas feitas durante a conversa, que visam transformar o ato de cozinhar e o consumo de alimentos em uma experiência mais consciente e divertida.
+
+## Estratégias Criativas
+
+### 1. Caixa do Tempo
+- **Conceito**: Criar uma ""caixa do tempo"" na geladeira, onde todos os alimentos que estão prestes a vencer em uma semana são armazenados juntos.
+- **Objetivo**: Estimular a criatividade ao cozinhar, desafiando-se a criar uma refeição única e inovadora utilizando apenas esses ingredientes.
+- **Benefício**: Converte a urgência de consumo em uma experiência gastronômica divertida, incentivando a utilização de alimentos que, de outra forma, poderiam ser desperdiçados.
+
+### 2. Esculturas Culinárias
+- **Conceito**: Transformar restos de comida em pequenas obras de arte temporárias, criando esculturas que podem ser consumidas.
+- **Objetivo**: Proporcionar uma forma lúdica de envolver a família no aproveitamento do alimento, destacando que cada item tem valor.
+- **Benefício**: Promove a conscientização sobre a importância de aproveitar os alimentos, além de agregar um elemento de diversão ao processo de consumo.
+
+### 3. Dia de Receitas do Resto
+- **Conceito**: Instituir um ""dia de receitas do resto"", onde uma vez por semana a família cozinha exclusivamente com ingredientes que estão prestes a vencer.
+- **Objetivo**: Incentivar a criatividade na cozinha, transformando alimentos que poderiam ser descartados em pratos criativos e inusitados.
+- **Benefício**: Reduz o desperdício de forma divertida e interativa, ao mesmo tempo que fortalece o convívio familiar em torno da culinária.
+
+## Conclusão
+As propostas discutidas oferecem abordagens inovadoras e lúdicas para combater o desperdício de comida em casa. Ao transformar o ato de cozinhar em um jogo culinário, as famílias podem não apenas reduzir o desperdício, mas também incentivar a criatividade, o valor dos alimentos e fortalecer os laços familiares. A implementação dessas ideias pode levar a um estilo de vida mais sustentável e consciente, beneficiando tanto o meio ambiente quanto as relações pessoais.",2318,player,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.4047812186194605,0.4308263827345197,2,-0.023079357631599576,0.428675886053157
+20260630-133553_56eedf2a,sim_20260630_133248,ousado_t10,1.0,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,887023029,True,15,28,14710,1941,0.0033710999999999997,51340,0,3,0,0.0,"# Resumo Final: Criatividade na Redução do Desperdício de Comida em Casa
+
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à tona uma série de ideias inovadoras e criativas que não apenas promovem a sustentabilidade, mas também incentivam o aproveitamento dos alimentos de maneira divertida e envolvente. Abaixo, estão os pontos-chave e conceitos organizados:
+
+## 1. Laboratório de Receitas Malucas
+- **Conceito**: Transformar a despensa em um espaço de exploração culinária.
+- **Ação**: Escolher aleatoriamente três ingredientes que estão prestes a vencer e criar receitas improvisadas.
+- **Benefício**: Estimula a criatividade na cozinha e evita o desperdício, proporcionando uma nova forma de encarar os alimentos.
+
+## 2. Floresta Alimentar
+- **Conceito**: Cultivar um espaço sustentável em casa.
+- **Ação**: Criar um ""porão"" que funcione como uma floresta alimentar, onde árvores frutíferas, ervas e vegetais são incentivados a crescer em um ciclo contínuo.
+- **Benefício**: Permite colher apenas o que é necessário, reduzindo a produção de resíduos e promovendo um estilo de vida mais autossuficiente.
+
+## 3. Armário de Sobrevivência
+- **Conceito**: Transformar sobras em arte e beleza.
+- **Ação**: Criar um armário onde alimentos não utilizados rapidamente são expostos de maneira atraente, com etiquetas criativas que os tornam visualmente interessantes.
+- **Benefício**: Inspira a família e amigos a consumirem os alimentos antes que se estraguem, ao mesmo tempo que valoriza a estética e a criatividade.
+
+## Conclusão
+As ideias apresentadas durante a conversa não apenas oferecem soluções práticas para reduzir o desperdício de comida, mas também transformam a maneira como nos relacionamos com os alimentos. Ao adotar essas abordagens criativas, podemos não apenas minimizar o desperdício, mas também enriquecer nossas experiências culinárias e promover uma cultura de aproveitamento e sustentabilidade em casa.",1942,player,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.38183000713136656,0.4241946715079179,3,-0.05054604645666517,0.4134631046539968
+20260630-133626_5ad1bd65,sim_20260630_133248,cauteloso_t04,0.4,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1646496908,True,15,28,13818,1950,0.0032427,51139,0,2,1,0.3333333333333333,"# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa
+
+## Introdução
+A discussão sobre como reduzir o desperdício de comida em casa trouxe à tona diferentes estratégias que podem ser implementadas pelas famílias para otimizar o uso de alimentos e minimizar perdas. A seguir, apresentamos os pontos chave, reviravoltas e conclusões da conversa.
+
+## Pontos Chave
+
+1. **Planejamento Semanal de Refeições**
+   - **Proposta Inicial**: Jogador Cauteloso sugeriu que cada família elabore um planejamento semanal de refeições, incluindo uma lista de ingredientes necessários. Essa prática visa evitar compras excessivas e garantir que todos os alimentos adquiridos sejam utilizados.
+   - **Vantagens**: O planejamento ajuda a organizar as refeições e a comprar apenas o que é necessário, reduzindo a possibilidade de alimentos que estragam.
+
+2. **Opções Práticas e Porções Menores**
+   - **Resistência ao Planejamento**: Renan destacou que, em sua rotina corrida, o planejamento nem sempre é viável. Em vez disso, ele propôs a criação de opções práticas e rápidas, como fazer porções menores e congelar.
+   - **Benefícios do Congelamento**: Essa abordagem permite que alimentos sejam mantidos por mais tempo, evitando o desperdício de itens que poderiam ser perdidos antes do consumo.
+
+3. **Calendário de Refeições**
+   - **Integração das Ideias**: Jogador Cauteloso sugeriu a implementação de um calendário de refeições semanal, que poderia ser uma ferramenta útil para organizar o que será consumido e facilitar a elaboração da lista de compras.
+   - **Impacto na Compra**: Um calendário bem estruturado ajuda a evitar a compra excessiva, já que os alimentos são escolhidos com base em refeições planejadas.
+
+## Conclusões
+Para reduzir o desperdício de comida em casa, é essencial combinar planejamento e flexibilidade. As famílias podem se beneficiar de:
+
+- **Um planejamento semanal de refeições** para organizar o que será consumido e evitar compras desnecessárias.
+- **A prática de porções menores e congelamento** para garantir que os alimentos não sejam perdidos, especialmente em rotinas corridas.
+- **Um calendário de refeições** que oriente as compras e o preparo, minimizando o risco de desperdício.
+
+Essas estratégias, quando adotadas em conjunto, podem resultar em uma gestão mais eficiente dos alimentos, contribuindo para a redução do desperdício e promovendo uma alimentação mais consciente e sustentável.",2427,player_decides,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player_decides|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.38053504846240704,0.39864037629538723,5,0.0021400236076874945,0.4203409002505001
+20260630-133657_1e967120,sim_20260630_133248,cauteloso_t04,0.4,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1790989308,True,15,28,14155,1864,0.0032416499999999996,43640,0,3,0,0.3333333333333333,"# Resumo Final: Estratégias para Reduzir o Desperdício de Comida em Casa
+
+## Introdução
+Na busca por soluções eficazes para reduzir o desperdício de comida em casa, surgiram diversas ideias que visam otimizar o uso de ingredientes e planejar as refeições de maneira mais consciente. A seguir, apresentamos os pontos-chave discutidos.
+
+## 1. Criação de um Calendário Semanal de Refeições
+- **Planejamento de Refeições:** Elaborar um calendário semanal onde se definem as refeições a serem preparadas. Isso ajuda a evitar compras desnecessárias e a utilizar os ingredientes que já estão disponíveis em casa.
+- **Inovação com Sobras:** Incluir um dia específico para transformar sobras em novas receitas. Isso não apenas reduz o desperdício, mas também incentiva a criatividade na cozinha.
+
+## 2. Implementação de um Calendário de Consumo
+- **Anotação de Datas de Validade:** Criar um calendário que registre as datas de validade dos alimentos. Essa prática assegura que os itens que estão mais próximos de vencer sejam consumidos primeiro, minimizando a chance de descarte.
+- **Planejamento Baseado na Validade:** As refeições da semana podem ser planejadas levando em consideração a data de vencimento dos produtos, priorizando aqueles que precisam ser utilizados rapidamente.
+
+## Conclusão
+Implementar um calendário de refeições e um calendário de consumo são estratégias eficazes para reduzir o desperdício de comida em casa. Essas práticas não apenas promovem a sustentabilidade, mas também ajudam a economizar dinheiro e a desenvolver uma relação mais consciente com a alimentação. Ao adotar essas abordagens, é possível transformar a maneira como gerenciamos nossos alimentos, garantindo um uso mais eficiente e responsável.",1728,player_decides,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player_decides|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.3440495708290601,0.38540174024414237,6,-0.02451870134883824,0.37896439326872267
+20260630-133721_cd1b16e5,sim_20260630_133248,ousado_t10,1.0,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1967938974,True,15,28,14028,1901,0.0032447999999999995,45561,0,3,0,0.3333333333333333,"# Resumo Final da Ideia: Redução do Desperdício de Comida em Casa
+
+A discussão sobre como reduzir o desperdício de comida em casa gerou ideias criativas e práticas que podem ser implementadas no dia a dia. A seguir, estão os principais pontos abordados, juntamente com sugestões para transformar a gestão de alimentos em uma experiência mais consciente e colaborativa.
+
+## Pontos Chave
+
+1. **Reflexão Visual**:
+   - **Espelho na Despensa**: A ideia de colocar um espelho na despensa serve como um lembrete visual. Ao abrir a porta, o reflexo incentiva a reconsideração dos itens que estão ali, promovendo uma escolha mais consciente sobre o que realmente é necessário.
+
+2. **Comedor Rotativo**:
+   - **Plataforma Giratória**: A proposta de um ""comedor rotativo"" destaca a importância da visibilidade. Alimentos próximos ao vencimento são colocados em uma plataforma giratória, tornando-se mais atraentes e acessíveis para consumo diário, o que pode ajudar a evitar que sejam esquecidos.
+
+3. **Cantinho da Criatividade Alimentar**:
+   - **Espaço para Sobras**: Criar um ""cantinho da criatividade alimentar"" na cozinha onde os ingredientes prestes a expirar fiquem visíveis. Isso estimula a família a usar esses alimentos em novas receitas, transformando o que poderia ser desperdício em uma atividade divertida e colaborativa, incentivando a criatividade culinária.
+
+## Conclusões
+
+A redução do desperdício de comida em casa não é apenas uma questão de organização, mas também de cultivar uma mentalidade mais consciente em relação ao consumo de alimentos. As ideias discutidas propõem um envolvimento ativo de todos os membros da família, tornando a gestão dos alimentos uma tarefa compartilhada e criativa. 
+
+Implementar essas sugestões pode não apenas diminuir o desperdício, mas também transformar a forma como as famílias interagem com a comida, promovendo uma cultura de reutilização e inovação na cozinha. Com um pouco de criatividade e esforço, é possível fazer uma diferença significativa na redução do desperdício alimentar em casa.",2041,player_decides,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player_decides|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.412045979246249,0.42041769042773935,2,-0.05647113891716058,0.4182080495388103
+20260630-133748_c4ed59e7,sim_20260630_133248,ousado_t10,1.0,Como reduzir o desperdício de comida em casa?,3,summary_ready,openai,gpt-4o-mini,1919889524,True,15,28,14619,1957,0.00336705,58317,0,3,0,0.6666666666666666,"# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa
+
+## Introdução
+A discussão sobre como reduzir o desperdício de comida em casa gerou várias ideias criativas e práticas. As sugestões apresentadas pelos participantes focaram em maneiras de tornar os alimentos mais valorizados e utilizados antes de se tornarem impróprios para consumo. Abaixo, estão os principais pontos e propostas que emergiram da conversa.
+
+## Estratégias Criativas
+
+### 1. Registro de Alimentos
+- **Caderno na Cozinha**: Um método prático onde se anota a data de compra e o motivo pelo qual um alimento não foi consumido. 
+- **Revisão Semanal**: Ao final da semana, revisar as anotações e desafiar-se a criar uma refeição com os ingredientes que quase foram desperdiçados.
+
+### 2. Museu da Comida
+- **Transformação da Geladeira**: Criar um ""museu da comida"" onde cada item tem uma plaqueta informativa com:
+  - Tempo de validade
+  - Sugestões de receitas
+  - Histórias ou memórias associadas ao alimento
+- **Benefícios Emocionais**: Essa abordagem não só torna os alimentos mais atraentes, mas também cria um vínculo emocional, incentivando o consumo antes de estragar.
+
+### 3. Sacola da Transformação
+- **Reaproveitamento de Ingredientes**: Criar uma ""sacola da transformação"" na geladeira para armazenar ingredientes que estão prestes a vencer.
+- **Refeições Coletivas**: Uma vez por semana, utilizar todos os ingredientes armazenados para preparar uma refeição coletiva, transformando restos em pratos surpreendentes e únicos.
+
+## Conclusão
+As ideias discutidas demonstram que o desperdício de comida pode ser efetivamente reduzido através da criatividade e do engajamento emocional com os alimentos. Ao implementar estratégias como o registro de alimentos, a transformação da geladeira em um museu e a criação de uma sacola da transformação, é possível não apenas minimizar o desperdício, mas também enriquecer a experiência culinária e fortalecer a conexão com a comida. Essas práticas não apenas promovem uma alimentação mais consciente, mas também contribuem para um estilo de vida mais sustentável.",2093,player_decides,comum,Como reduzir o desperdício de comida em casa?,True,composto,same_model,3,best_idea=player_decides|composicao=comum|source_blind=True|model_pairing=same_model|judge_criterion=composto,0.43415424192571056,0.4327562223856601,4,-0.019427774262776004,0.44250438910296996

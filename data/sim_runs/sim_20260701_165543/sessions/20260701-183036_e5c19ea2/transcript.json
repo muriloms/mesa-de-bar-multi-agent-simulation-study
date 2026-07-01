@@ -1,0 +1,44 @@
+{
+  "session_id": "20260701-183036_e5c19ea2",
+  "topic": "O que torna uma vida bem vivida?",
+  "round": 6,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'O que torna uma vida bem vivida?'. Jogador Ousado (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 3,
+      "player_name": "Bia",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 4,
+      "player_name": "Renan",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Dona Cleide",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 3,
+      "player_name": "Bia",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 2,
+      "player_name": "Seu Antônio",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Dona Cleide",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    }
+  ],
+  "final_summary": "A conversa foi boa, mas a ideia final se perdeu no barulho do bar."
+}

@@ -1,0 +1,29 @@
+{
+  "session_id": "20260701-130938_a5480b01",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 3,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Equilibrado (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu sugiro criar um \"cardápio semanal rotativo\" onde, a cada semana, escolhemos um tema culinário diferente e usamos os ingredientes que temos em casa para criar receitas dentro desse tema, incentivando a criatividade e garantindo que os produtos sejam utilizados antes de estragarem."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu criei um calendário de refeições interativo que se adapta às minhas compras semanais, permitindo que eu planeje pratos com os ingredientes que já tenho em casa, evitando assim que alimentos estraguem antes de serem consumidos."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Renan",
+      "message": "Vamos falar dos apps de doação de comida, galera. Tem muita gente precisando e muitas vezes o que tá sobrando na nossa casa pode fazer a diferença pra alguém. Isso reduz desperdício de verdade e ainda ajuda a comunidade."
+    }
+  ],
+  "final_summary": "# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa\n\nA discussão sobre como minimizar o desperdício de comida em casa trouxe à tona diversas estratégias práticas e criativas. Aqui estão os pontos-chave, reviravoltas e conclusões que emergiram da conversa.\n\n## Pontos-Chave\n\n1. **Cardápio Semanal Rotativo**:\n   - A proposta de criar um cardápio semanal com temas culinários variados.\n   - Utilização criativa dos ingredientes que já estão disponíveis em casa.\n   - Garantia de que os alimentos sejam utilizados antes de estragarem.\n\n2. **Calendário de Refeições Interativo**:\n   - Desenvolvimento de um calendário que se adapta às compras semanais.\n   - Planejamento de pratos com base nos ingredientes disponíveis.\n   - Prevenção do desperdício ao garantir que os alimentos sejam consumidos em tempo hábil.\n\n3. **Aplicativos de Doação de Comida**:\n   - Uso de aplicativos para facilitar a doação de alimentos excedentes.\n   - Contribuição significativa para a comunidade ao ajudar aqueles que necessitam.\n   - Redução do desperdício ao oferecer uma alternativa viável para alimentos que não serão consumidos.\n\n## Reviravoltas\n\n- A ideia de que a criatividade na cozinha pode ser uma solução não apenas para o desperdício, mas também para a monotonia nas refeições.\n- A introdução de tecnologia, como calendários interativos e aplicativos, como ferramentas essenciais para o planejamento eficiente das refeições.\n- O reconhecimento da responsabilidade social que vem com a doação de alimentos, transformando o que seria desperdício em uma oportunidade de ajuda à comunidade.\n\n## Conclusões\n\nAs estratégias apresentadas demonstram que é possível reduzir o desperdício de comida em casa por meio de um planejamento eficaz e da criatividade culinária. Além disso, iniciativas comunitárias, como a doação de alimentos, não só minimizam o desperdício, mas também fortalecem os laços sociais. Implementar um cardápio rotativo e um calendário interativo, aliado ao uso de aplicativos de doação, pode transformar o ato de cozinhar em uma experiência mais consciente e responsável. \n\nEssas práticas não apenas ajudam a lidar com o problema do desperdício, mas também promovem uma alimentação mais saudável e sustentável, refletindo um compromisso coletivo com a preservação dos recursos e o bem-estar da comunidade."
+}

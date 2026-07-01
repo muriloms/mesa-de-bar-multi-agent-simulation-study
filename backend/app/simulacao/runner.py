@@ -130,29 +130,40 @@ async def run_one_game(cell, jogador, run_id: str, mark: bool, sim: Simulacao,
     human_id = human.id if human else 0
     decide_rng = _rnd.Random(f"{run_id}:{session_id}:advance")
 
+    valid, invalid_reason = True, None
     guard = 0
     round_i = 0
-    while guard < cell["rounds"] + 2:
-        guard += 1
-        seed_r = (llm_seed + round_i) % (2**31) if sim.yoked_seeds else None
-        idea = player_agent.propose(manager, jogador, state.topic, seed=seed_r,
-                                    session_id=session_id, round_num=round_i + 1)
-        state = await game_service.submit_user_idea(session_id, human_id, idea)
-        ref = player_agent.pick(manager, jogador, state.topic, state.choice_options or [],
-                                session_id=session_id, round_num=round_i + 1)
-        if ref:
-            state = await game_service.submit_player_pick(session_id, ref)
-        agree = player_agent.decide_advance(jogador, decide_rng)
-        state = await game_service.advance_round_after_reveal(session_id, agree_judge=agree)
-        round_i += 1
-        if getattr(state, "phase_name", "") == "closing" or getattr(state, "game_phase", "") == "finished":
-            state = await game_service.end_game_session(session_id)
-            break
+    try:
+        while guard < cell["rounds"] + 2:
+            guard += 1
+            seed_r = (llm_seed + round_i) % (2**31) if sim.yoked_seeds else None
+            idea = player_agent.propose(manager, jogador, state.topic, seed=seed_r,
+                                        session_id=session_id, round_num=round_i + 1,
+                                        attempts=sim.player_call_attempts)
+            state = await game_service.submit_user_idea(session_id, human_id, idea)
+            ref = player_agent.pick(manager, jogador, state.topic, state.choice_options or [],
+                                    session_id=session_id, round_num=round_i + 1,
+                                    attempts=sim.player_call_attempts)
+            if ref:
+                state = await game_service.submit_player_pick(session_id, ref)
+            agree = player_agent.decide_advance(jogador, decide_rng)
+            state = await game_service.advance_round_after_reveal(session_id, agree_judge=agree)
+            round_i += 1
+            if getattr(state, "phase_name", "") == "closing" or getattr(state, "game_phase", "") == "finished":
+                state = await game_service.end_game_session(session_id)
+                break
+    except player_agent.PlayerCallError as e:
+        # INTEGRIDADE: chamada do jogador falhou após retries -> sessão inválida.
+        # Nada de ideia-fake/escolha-aleatória; a sessão é excluída da análise.
+        valid, invalid_reason = False, str(e)
 
     if mark:
         try:
             m = session_store.read_manifest(session_id)
             m["simulated"] = True
+            m["valid"] = valid
+            if not valid:
+                m["invalid_reason"] = invalid_reason
             m["sim_run_id"] = run_id
             m["player_persona"] = jogador.id
             m["player_temperature"] = jogador.llm.temperature
@@ -164,15 +175,17 @@ async def run_one_game(cell, jogador, run_id: str, mark: bool, sim: Simulacao,
             pass
 
     if out_dir is not None:
+        # sessões válidas -> sessions/ (entram na análise); inválidas -> failed/
+        subdir = "sessions" if valid else "failed"
         try:
             src = paths.session_dir(session_id)
             if src.exists():
-                dst_root = out_dir / "sessions"
+                dst_root = out_dir / subdir
                 dst_root.mkdir(parents=True, exist_ok=True)
                 shutil.move(str(src), str(dst_root / session_id))
         except Exception:
             pass
-    return session_id
+    return {"session_id": session_id, "ok": valid, "reason": invalid_reason}
 
 
 async def run_simulation(sim: Simulacao, run_id: Optional[str] = None,
@@ -240,35 +253,72 @@ async def run_simulation(sim: Simulacao, run_id: Optional[str] = None,
             juiz_id = None
 
     _rnd.seed(sim.seed)
-    sessions, errors = [], []
+    sessions, errors, invalid = [], [], []
+    attempted = 0
+    aborted, abort_reason = False, None
+    thr = sim.abort_if_fail_rate_over
+    min_check = sim.min_sessions_before_abort_check
     for ci, cell in enumerate(cells):
+        if aborted:
+            break
         for jogador in jogadores:
+            if aborted:
+                break
             for g in range(sim.n_games):
                 desc = (f"célula {ci+1}/{len(cells)} · {jogador.id} · jogo {g+1}/{sim.n_games} "
                         f"· best_idea={cell['best_idea']} · pairing={cell.get('model_pairing')}")
                 progress.update(run_id, current=desc)
                 try:
-                    sid = await run_one_game(cell, jogador, run_id, sim.mark_synthetic,
+                    res = await run_one_game(cell, jogador, run_id, sim.mark_synthetic,
                                              sim, juiz_id, g, out_dir=out_dir)
-                    sessions.append({"session_id": sid, "cell": ci, "persona": jogador.id})
-                except Exception as e:
-                    errors.append(str(e))
+                except Exception as e:              # falha fora do caminho do jogador
+                    res = {"session_id": None, "ok": False, "reason": f"engine: {e}"}
+                attempted += 1
+                if res.get("ok"):
+                    sessions.append({"session_id": res["session_id"], "cell": ci,
+                                     "persona": jogador.id})
+                else:
+                    invalid.append({"session_id": res.get("session_id"), "cell": ci,
+                                    "persona": jogador.id, "reason": res.get("reason")})
+                    errors.append(res.get("reason"))
                 progress.tick(run_id, current=desc)
                 if progress_cb:
                     progress_cb(run_id)
+                # GUARDA DE INTEGRIDADE: aborta se a taxa de inválidas estourar
+                fail_rate = len(invalid) / attempted if attempted else 0.0
+                if attempted >= min_check and fail_rate > thr:
+                    aborted = True
+                    abort_reason = (f"taxa de sessões inválidas {fail_rate:.1%} > "
+                                    f"limiar {thr:.1%} após {attempted} sessões — "
+                                    f"run abortado (provável falha de API/parse em massa)")
+                    progress.update(run_id, current="ABORTADO: " + abort_reason)
+                    break
 
+    fail_rate = len(invalid) / attempted if attempted else 0.0
     manifest = {
         "run_id": run_id,
         "finished_at": datetime.now().isoformat(timespec="seconds"),
+        "aborted": aborted,
+        "abort_reason": abort_reason,
+        "integrity": {
+            "attempted": attempted,
+            "valid": len(sessions),
+            "invalid": len(invalid),
+            "fail_rate": round(fail_rate, 4),
+            "threshold": thr,
+        },
         "total_sessions": len(sessions),
-        "errors": errors,
+        "errors": errors[:50],
+        "invalid_sessions": invalid[:50],
         "sessions": sessions,
         **params_doc,
     }
     (out_dir / "run_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    progress.update(run_id, status="error" if errors and not sessions else "done",
-                    errors=errors[:20],
+    status = "aborted" if aborted else ("error" if invalid and not sessions else "done")
+    progress.update(run_id, status=status, errors=errors[:20],
+                    integrity=manifest["integrity"],
                     finished_at=datetime.now().isoformat(timespec="seconds"))
-    return {"run_id": run_id, "sessions": len(sessions), "errors": len(errors),
+    return {"run_id": run_id, "sessions": len(sessions), "invalid": len(invalid),
+            "aborted": aborted, "fail_rate": round(fail_rate, 4),
             "output_dir": str(out_dir)}

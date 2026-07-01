@@ -1,0 +1,44 @@
+{
+  "session_id": "20260701-184903_72e55483",
+  "topic": "Como seria uma cidade projetada para o ócio, e não para o trabalho?",
+  "round": 6,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como seria uma cidade projetada para o ócio, e não para o trabalho?'. Jogador Ousado (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 4,
+      "player_name": "Dona Cleide",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 4,
+      "player_name": "Dona Cleide",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Bia",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Ousado (T=0.7)",
+      "message": "Uma ideia simples sobre: Como seria uma cidade projetada para o ócio, e não para o trabalho?"
+    },
+    {
+      "player_id": 5,
+      "player_name": "Bia",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Ousado (T=0.7)",
+      "message": "Uma ideia simples sobre: Como seria uma cidade projetada para o ócio, e não para o trabalho?"
+    }
+  ],
+  "final_summary": "A conversa foi boa, mas a ideia final se perdeu no barulho do bar."
+}

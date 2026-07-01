@@ -103,3 +103,124 @@ def test_chamada_do_jogador_e_logada_e_entra_nos_custos():
 
     cb = compute_session_costs(sid)
     assert any(k.startswith("player:") for k in cb["by_actor"])
+
+
+# --- Integridade (itens 1-4) -----------------------------------------------
+def _mkjog(pid="c", temp=0.4):
+    from simulacao.loader import JogadorPersona, JogadorLLM
+    return JogadorPersona(id=pid, name="C", llm=JogadorLLM(temperature=temp))
+
+
+def test_propose_faz_retry_e_nao_usa_fallback():
+    from simulacao import agent
+    from llm.client_base import LLMResponse
+    jog = _mkjog()
+
+    class Flaky:
+        provider = "openai"; model = "gpt-4o-mini"
+        def __init__(self): self.n = 0
+        def complete(self, p, pa):
+            self.n += 1
+            if self.n < 3:
+                raise RuntimeError("timeout")
+            return LLMResponse("ideia", tokens_in=10, tokens_out=2), 5
+    f = Flaky()
+    assert agent.propose(f, jog, "t", attempts=3) == "ideia" and f.n == 3
+
+    class Dead:
+        provider = "openai"; model = "gpt-4o-mini"
+        def complete(self, p, pa): raise RuntimeError("rate limit")
+    import pytest
+    with pytest.raises(agent.PlayerCallError):
+        agent.propose(Dead(), jog, "t", attempts=2)
+
+
+def test_pick_levanta_sem_escolha_aleatoria():
+    from simulacao import agent
+    from llm.client_base import LLMResponse
+    from types import SimpleNamespace as NS
+    import pytest
+    jog = _mkjog()
+    opts = [NS(ref="A", idea_text="x"), NS(ref="B", idea_text="y")]
+
+    class Junk:
+        provider = "openai"; model = "gpt-4o-mini"
+        def complete(self, p, pa): return LLMResponse("sei lá", tokens_in=20, tokens_out=3), 4
+    with pytest.raises(agent.PlayerCallError):
+        agent.pick(Junk(), jog, "t", opts, attempts=1)
+
+
+def test_log_distingue_falha_de_token_zero():
+    """Item 3: chamada falha -> sem tokens; parse falha mas API respondeu -> tokens reais."""
+    from services import game_service as G
+    from domain.session import GlobalLlmConfig
+    from persistence import paths
+    from simulacao import agent
+    from llm.client_base import LLMResponse
+    from types import SimpleNamespace as NS
+    import json
+    jog = _mkjog()
+
+    class Dead:
+        provider = "openai"; model = "gpt-4o-mini"
+        def complete(self, p, pa): raise RuntimeError("boom")
+
+    class Junk:
+        provider = "openai"; model = "gpt-4o-mini"
+        def complete(self, p, pa): return LLMResponse("sei la", tokens_in=20, tokens_out=3), 4
+
+    st = G.create_session_from_study(
+        "main", "T", GlobalLlmConfig(provider="openai", model="gpt-4o-mini", apiKey="k"))
+    sid = st.session_id
+    try:
+        agent.propose(Dead(), jog, "t", session_id=sid, round_num=1, attempts=1)
+    except agent.PlayerCallError:
+        pass
+    opts = [NS(ref="opt_0", idea_text="x"), NS(ref="opt_1", idea_text="y")]
+    try:
+        agent.pick(Junk(), jog, "t", opts, session_id=sid, round_num=1, attempts=1)
+    except agent.PlayerCallError:
+        pass
+    rows = [json.loads(l) for l in
+            paths.llm_log_path(sid).read_text(encoding="utf-8").splitlines()]
+    player = [r for r in rows if r["context"].get("actor_role") == "player"]
+    failed = [r for r in player if r["parse_status"] == "failed"]
+    unparsed = [r for r in player if r["parse_status"] == "unparsed"]
+    assert failed and failed[0]["tokens"] == {} and failed[0]["error"]
+    assert unparsed and unparsed[0]["tokens"] == {"in": 20, "out": 3}
+
+
+def test_runner_aborta_com_taxa_alta_de_falha(tmp_path, monkeypatch):
+    import asyncio
+    import simulacao.runner as R
+    from simulacao.loader import load_simulacao
+
+    async def fake_fail(*a, **k):
+        return {"session_id": "s", "ok": False, "reason": "boom"}
+    monkeypatch.setattr(R, "run_one_game", fake_fail)
+    sim = load_simulacao().model_copy(update={
+        "dry_run": False, "output_dir": str(tmp_path), "n_games": 50,
+        "temperaturas": [], "jogadores": ["cauteloso"],
+        "min_sessions_before_abort_check": 10, "abort_if_fail_rate_over": 0.02})
+    res = asyncio.run(R.run_simulation(sim, run_id="abort_test"))
+    assert res["aborted"] is True
+    assert res["sessions"] == 0 and res["fail_rate"] > 0.02
+
+
+def test_runner_separa_validas_e_invalidas(tmp_path, monkeypatch):
+    import asyncio
+    import simulacao.runner as R
+    from simulacao.loader import load_simulacao
+    cnt = {"n": 0}
+
+    async def fake_mix(*a, **k):
+        cnt["n"] += 1
+        ok = cnt["n"] % 2 == 0
+        return {"session_id": f"s{cnt['n']}", "ok": ok, "reason": None if ok else "x"}
+    monkeypatch.setattr(R, "run_one_game", fake_mix)
+    sim = load_simulacao().model_copy(update={
+        "dry_run": False, "output_dir": str(tmp_path), "n_games": 1,
+        "temperaturas": [], "jogadores": ["cauteloso"],
+        "abort_if_fail_rate_over": 1.0})   # não aborta
+    res = asyncio.run(R.run_simulation(sim, run_id="mix"))
+    assert res["invalid"] > 0 and res["sessions"] > 0 and not res["aborted"]

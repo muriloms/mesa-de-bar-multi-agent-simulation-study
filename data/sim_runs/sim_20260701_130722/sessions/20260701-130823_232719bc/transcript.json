@@ -1,0 +1,29 @@
+{
+  "session_id": "20260701-130823_232719bc",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 3,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Cauteloso (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Bia",
+      "message": "E se a gente falasse sobre isso de um jeito mais prático? Tipo, usar apps de planejamento de refeições ou até grupos de troca de alimentos entre amigos. Sabe, uma vibe mais colaborativa pra evitar o desperdício."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.7)",
+      "message": "Eu proponho que cada família reserve um dia da semana para planejar as refeições, utilizando os ingredientes que já estão na despensa e na geladeira, assim evitando compras desnecessárias e aproveitando ao máximo o que já temos."
+    },
+    {
+      "player_id": 4,
+      "player_name": "Seu Antônio",
+      "message": "Isso mesmo, Jogador Cauteloso! E se a gente também pensar em como armazenar os alimentos? A forma como guardamos faz toda a diferença pra conservar e evitar que estrague antes de usar. Isso pesa no bolso, viu?"
+    }
+  ],
+  "final_summary": "# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa\n\nA discussão sobre como reduzir o desperdício de comida em casa revelou várias estratégias práticas e colaborativas. Abaixo estão os pontos-chave, reviravoltas e conclusões que surgiram durante a conversa.\n\n## 1. Abordagens Práticas\n\n### Uso de Tecnologia\n- **Aplicativos de Planejamento de Refeições**: A utilização de apps que ajudam a planejar refeições pode facilitar a organização e minimizar a compra de alimentos desnecessários.\n- **Grupos de Troca de Alimentos**: Incentivar a formação de grupos entre amigos e familiares para trocar alimentos pode ser uma maneira eficaz de evitar o desperdício, promovendo uma cultura de colaboração.\n\n## 2. Planejamento Familiar\n\n### Reservar um Dia da Semana\n- **Planejamento de Refeições**: O Jogador Cauteloso sugeriu que cada família reserve um dia da semana para planejar suas refeições. Essa prática ajuda a utilizar ingredientes que já estão disponíveis em casa, evitando compras excessivas e aproveitando ao máximo o que já se possui.\n\n## 3. Armazenamento Eficiente\n\n### Conservação de Alimentos\n- **Métodos de Armazenamento**: Seu Antônio destacou a importância de armazenar os alimentos corretamente. A maneira como os alimentos são guardados pode influenciar diretamente sua durabilidade, evitando que estraguem antes de serem consumidos. Investir em recipientes adequados e técnicas de conservação é essencial para manter a frescura dos produtos e minimizar perdas.\n\n## Conclusão\n\nA combinação dessas práticas — planejamento eficiente, uso de tecnologia e armazenamento adequado — pode resultar em uma significativa redução do desperdício de comida em casa. Ao adotar uma abordagem colaborativa e consciente, cada família pode contribuir para um consumo mais sustentável e econômico, beneficiando não apenas o bolso, mas também o meio ambiente."
+}

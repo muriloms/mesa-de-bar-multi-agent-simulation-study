@@ -1,0 +1,29 @@
+{
+  "session_id": "20260701-133516_1b51f86a",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 3,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Cauteloso (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.7)",
+      "message": "Eu sugiro que criemos um calendário de refeições semanal, onde planejo o que vou cozinhar com os ingredientes que já tenho em casa, assim consigo usar tudo antes que estrague e evito compras desnecessárias."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.7)",
+      "message": "Eu sugiro que cada família crie um \"cardápio da semana\", planejando as refeições com base nos alimentos que já têm em casa, evitando compras desnecessárias e utilizando os ingredientes antes que estraguem."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.7)",
+      "message": "Eu sugiro que criemos um calendário de refeições semanal, onde planejo antecipadamente o que vou cozinhar e utilizo os ingredientes que já tenho em casa, evitando compras desnecessárias e aproveitando melhor os alimentos."
+    }
+  ],
+  "final_summary": "# Resumo Final da Ideia: Reduzindo o Desperdício de Comida em Casa\n\n## Introdução\nA redução do desperdício de comida em casa é uma preocupação crescente, que pode ser abordada por meio de um planejamento estratégico das refeições. A discussão entre os participantes destacou a importância de organizar as compras e o uso dos ingredientes disponíveis, promovendo uma abordagem mais consciente e eficiente na cozinha.\n\n## Pontos Chave da Discussão\n\n### 1. Criação de um Calendário de Refeições\n- **Planejamento Semanal**: Elaborar um calendário de refeições para a semana permite que cada família tenha uma visão clara do que será preparado. \n- **Uso dos Ingredientes Existentes**: O planejamento deve ser baseado nos alimentos já disponíveis em casa, ajudando a evitar compras desnecessárias.\n\n### 2. Cardápio da Semana\n- **Evitar Compras Desnecessárias**: Ao criar um cardápio, as famílias podem evitar comprar mais alimentos do que realmente precisam, reduzindo, assim, o risco de estragamento.\n- **Aproveitamento Máximo dos Alimentos**: O cardápio deve ser formulado de forma a utilizar os ingredientes antes que eles se deterioram, garantindo que nada seja desperdiçado.\n\n## Conclusões\nA implementação de um calendário de refeições e um cardápio semanal é uma estratégia eficaz para reduzir o desperdício de comida em casa. Essa abordagem não só promove uma alimentação mais consciente, mas também otimiza o uso dos recursos disponíveis, contribuindo para a sustentabilidade e a economia familiar. Ao utilizar o que já se tem, as famílias podem desfrutar de refeições variadas e saborosas, ao mesmo tempo em que evitam o desperdício."
+}

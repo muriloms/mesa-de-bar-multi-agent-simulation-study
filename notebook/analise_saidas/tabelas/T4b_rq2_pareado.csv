@@ -1,0 +1,4 @@
+contrast,n_themes,delta,t_paired_p,wilcoxon_p,cohen_dz
+judge vs player,6,0.1007,0.0957,0.1562,0.837
+judge vs player_decides,6,0.1553,0.0048,0.0312,1.966
+player vs player_decides,6,0.0546,0.3009,0.4375,0.471

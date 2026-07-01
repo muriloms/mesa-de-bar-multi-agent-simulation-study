@@ -1,0 +1,44 @@
+{
+  "session_id": "20260701-183817_f05901b3",
+  "topic": "Como uma cidade média pode se adaptar a eventos climáticos extremos?",
+  "round": 6,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como uma cidade média pode se adaptar a eventos climáticos extremos?'. Jogador Cauteloso (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Seu Antônio",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.7)",
+      "message": "Uma ideia simples sobre: Como uma cidade média pode se adaptar a eventos climáticos extremos?"
+    },
+    {
+      "player_id": 3,
+      "player_name": "Jéssica",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 2,
+      "player_name": "Dona Cleide",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.7)",
+      "message": "Uma ideia simples sobre: Como uma cidade média pode se adaptar a eventos climáticos extremos?"
+    },
+    {
+      "player_id": 2,
+      "player_name": "Dona Cleide",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    }
+  ],
+  "final_summary": "A conversa foi boa, mas a ideia final se perdeu no barulho do bar."
+}

@@ -1,0 +1,33 @@
+# ===========================================================================
+# SIMULAÇÃO — RUN ENXUTO PARA O ARTIGO (foco em RQ2/RQ4)
+# Testa a pergunta CENTRAL — dinâmica de decisão -> homogeneização — com os
+# 6 temas dando réplica para a inferência da diversidade coletiva. Todo o
+# resto fica FIXO na célula de referência (mínimo de tokens).
+#
+# Cobre: RQ2 (homogeneização entre sessões, F2), RQ4 (convergência, F3),
+#        autoria dos vencedores, e a validação de engenharia (T7/custo).
+# NÃO cobre (fica p/ runs futuros): RQ1 (composição), RQ3 (cegueira),
+#        RQ5 (model_pairing) e as variantes B0–B3.
+# ===========================================================================
+
+run_id: null
+seed: 20260629
+n_games: 2                   # 2 -> 6 sessões por (dinâmica × tema); enxuto e estável
+
+# 3 personas na temperatura média (cobre a disposição sem inflar sessões)
+jogadores: [cauteloso_t07, equilibrado_t07, ousado_t07]
+
+condicoes:
+  best_idea: [judge, player, player_decides]   # FATOR B — a pergunta central
+  composicao: [comum]                          # fixo
+  source_blind_on_choice: [true]               # fixo (anonima)
+  rounds: [3]                                  # curto (troque p/ 6 se puder pagar ~2×)
+  judge_criterion: [composto]                  # fixo
+  # 6 temas = réplica p/ diversidade coletiva + gradiente de complexidade
+  tema: ["Como reduzir o desperdício de comida em casa?", "Uma nova forma de as pessoas fazerem amizades na vida adulta", "O que torna uma vida bem vivida?", "Como reduzir as alucinações de modelos de linguagem?", "Como uma cidade média pode se adaptar a eventos climáticos extremos?", "Como seria uma cidade projetada para o ócio, e não para o trabalho?"]
+
+formularios: "off"
+output_dir: data/sim_runs
+mark_synthetic: true
+dry_run: true                # confirme o plan antes; depois mude p/ false
+max_parallel: 4

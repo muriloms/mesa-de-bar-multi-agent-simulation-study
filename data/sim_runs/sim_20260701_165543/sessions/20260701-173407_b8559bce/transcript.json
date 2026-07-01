@@ -1,0 +1,44 @@
+{
+  "session_id": "20260701-173407_b8559bce",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 6,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Equilibrado (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu criei um \"cardápio da semana\" que utiliza os ingredientes que já tenho em casa, planejando refeições que aproveitam os alimentos que estão prestes a vencer, assim evito comprar coisas desnecessárias e maximizo o que já possuo."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu proponho criar um calendário de refeições interativo, onde planejo o que vou cozinhar para a semana com base nos ingredientes que já tenho em casa, integrando uma lista de receitas que utilizam os itens prestes a vencer, assim consigo evitar compras desnecessárias e utilizar tudo antes que estrague."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu criei um \"desafio da refeição improvisada\" em casa, onde semanalmente escolhemos um dia para preparar um jantar apenas com os ingredientes que estão prestes a vencer, transformando isso em uma competição divertida entre a família para ver quem consegue criar o prato mais saboroso."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu criaria um \"desafio da comida invisível\", onde a cada semana escolhemos um item da despensa que já está esquecido e planejamos receitas criativas para usá-lo, compartilhando nossas criações nas redes sociais para inspirar outros e criar uma comunidade em torno do tema."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu criaria um \"desafio da geladeira vazia\", onde, uma vez por mês, minha família e eu teríamos que preparar refeições apenas com os ingredientes que já temos em casa, incentivando a criatividade e o uso de sobras, além de documentar nossas criações para compartilhar e inspirar outras pessoas."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu proponho criar um \"desafio da geladeira\", onde uma vez por semana a família se reúne para preparar um prato usando apenas os ingredientes que estão prestes a vencer, transformando isso em uma atividade divertida e criativa. Assim, além de reduzir o desperdício, fortalecemos os laços familiares e exploramos novas receitas."
+    }
+  ],
+  "final_summary": "# Resumo Final da Ideia: Redução do Desperdício de Comida em Casa\n\nA conversa sobre como reduzir o desperdício de comida em casa revelou uma série de estratégias criativas e práticas que podem ser implementadas no dia a dia. A seguir, apresentamos os principais pontos discutidos, organizados em tópicos e propostas de ação.\n\n## 1. Planejamento de Refeições\n\n### a. Cardápio da Semana\n- Criar um cardápio semanal que utilize ingredientes já disponíveis em casa, focando em alimentos que estão prestes a vencer. Isso ajuda a evitar compras desnecessárias e maximiza o uso do que já se possui.\n\n### b. Calendário Interativo de Refeições\n- Desenvolver um calendário onde se planejam as refeições da semana com base nos ingredientes disponíveis, integrando receitas que utilizem itens que estão próximos do vencimento.\n\n## 2. Desafios Divertidos\n\n### a. Desafio da Refeição Improvisada\n- Estabelecer um dia da semana para preparar um jantar somente com os ingredientes prestes a vencer, transformando isso em uma competição divertida entre os membros da família para criar o prato mais saboroso.\n\n### b. Desafio da Comida Invisível\n- Escolher semanalmente um item esquecido na despensa e planejar receitas criativas para utilizá-lo, incentivando a partilha das criações nas redes sociais para inspirar outros.\n\n### c. Desafio da Geladeira Vazia\n- Uma vez por mês, preparar refeições somente com os ingredientes disponíveis em casa. Essa prática estimula a criatividade e o uso de sobras, além de documentar as criações para inspirar outras pessoas.\n\n### d. Desafio da Geladeira\n- Realizar, semanalmente, um encontro familiar para preparar um prato usando apenas os ingredientes prestes a vencer. Isso não só reduz o desperdício, mas também fortalece os laços familiares e promove a exploração de novas receitas.\n\n## Conclusão\n\nAs propostas discutidas oferecem soluções práticas e engajadoras para combater o desperdício de alimentos em casa. Através do planejamento consciente e da gamificação do processo de cozinhar, é possível transformar a rotina alimentar em uma experiência mais sustentável e divertida. Essas práticas não só ajudam a manter a casa livre de desperdícios, mas também promovem a criatividade na culinária e a união familiar."
+}

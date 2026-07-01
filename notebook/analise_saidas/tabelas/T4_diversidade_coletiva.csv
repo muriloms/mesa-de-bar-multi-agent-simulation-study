@@ -1,4 +1,19 @@
 cell_best_idea,cell_tema,n_sessions,n_winners,collective_div
-judge,Como reduzir o desperdício de comida em casa?,4,12,0.42429889543105737
-player,Como reduzir o desperdício de comida em casa?,4,12,0.398508878949141
-player_decides,Como reduzir o desperdício de comida em casa?,4,12,0.3878748872807245
+judge,Como reduzir as alucinações de modelos de linguagem?,6,36,0.40460282978110246
+judge,Como reduzir o desperdício de comida em casa?,6,36,0.3905551824896961
+judge,"Como seria uma cidade projetada para o ócio, e não para o trabalho?",6,36,0.336598018132957
+judge,Como uma cidade média pode se adaptar a eventos climáticos extremos?,6,36,0.34321907239442473
+judge,O que torna uma vida bem vivida?,6,36,0.43161559543477523
+judge,Uma nova forma de as pessoas fazerem amizades na vida adulta,6,36,0.3731213303397363
+player,Como reduzir as alucinações de modelos de linguagem?,6,36,0.11408682196172354
+player,Como reduzir o desperdício de comida em casa?,6,36,0.31913139898189624
+player,"Como seria uma cidade projetada para o ócio, e não para o trabalho?",6,36,0.22330681839343317
+player,Como uma cidade média pode se adaptar a eventos climáticos extremos?,6,36,0.28421286740029467
+player,O que torna uma vida bem vivida?,6,36,0.28495972033822103
+player,Uma nova forma de as pessoas fazerem amizades na vida adulta,6,36,0.4498858052849301
+player_decides,Como reduzir as alucinações de modelos de linguagem?,6,36,0.16043459214880798
+player_decides,Como reduzir o desperdício de comida em casa?,6,36,0.2804706922235909
+player_decides,"Como seria uma cidade projetada para o ócio, e não para o trabalho?",6,36,0.24640752374447797
+player_decides,Como uma cidade média pode se adaptar a eventos climáticos extremos?,6,36,0.284212865627483
+player_decides,O que torna uma vida bem vivida?,6,36,0.19718194934117975
+player_decides,Uma nova forma de as pessoas fazerem amizades na vida adulta,6,36,0.17913127199805604

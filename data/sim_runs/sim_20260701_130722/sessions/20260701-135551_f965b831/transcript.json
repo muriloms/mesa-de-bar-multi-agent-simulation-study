@@ -1,0 +1,29 @@
+{
+  "session_id": "20260701-135551_f965b831",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 3,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Equilibrado (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu sugiro criar um \"desafio da geladeira vazia\" em que, uma vez por mês, eu e minha família tentamos preparar todas as refeições usando apenas os ingredientes que já temos em casa, incentivando a criatividade na cozinha e evitando compras desnecessárias."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu sugiro criar um \"desafio da receita criativa\" em família, onde cada membro deve usar os ingredientes que estão prestes a vencer para criar um prato inovador semanalmente, tornando o aproveitamento de alimentos uma atividade divertida e colaborativa."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Equilibrado (T=0.7)",
+      "message": "Eu sugiro criar um \"calendário de consumo\" onde, a cada semana, eu planejo e anoto as refeições com os alimentos que estão prestes a vencer, garantindo que utilizo tudo antes que estrague e, ao mesmo tempo, me divirto com novas receitas."
+    }
+  ],
+  "final_summary": "# Resumo Final da Ideia: Redução do Desperdício de Comida em Casa\n\n## Introdução\nA redução do desperdício de comida é um objetivo importante que pode ser alcançado através da criatividade e do planejamento na cozinha. A discussão entre os participantes trouxe à tona várias estratégias práticas e envolventes que podem ser implementadas no dia a dia. Abaixo, estão os pontos chave e as propostas sugeridas para promover um consumo mais consciente e sustentável.\n\n## Estratégias Sugeridas\n\n### 1. Desafio da Geladeira Vazia\n- **Descrição**: Uma vez por mês, a família se compromete a preparar todas as refeições utilizando apenas os ingredientes já disponíveis em casa.\n- **Objetivo**: Incentivar a criatividade na cozinha e evitar compras desnecessárias, promovendo um consumo mais eficiente dos alimentos.\n\n### 2. Desafio da Receita Criativa\n- **Descrição**: Cada membro da família deve criar um prato inovador utilizando ingredientes que estão prestes a vencer, semanalmente.\n- **Objetivo**: Transformar o aproveitamento de alimentos em uma atividade divertida e colaborativa, estimulando o envolvimento de todos na cozinha.\n\n### 3. Calendário de Consumo\n- **Descrição**: Criar um planejamento semanal onde as refeições são organizadas em torno dos alimentos que estão próximos da validade.\n- **Objetivo**: Garantir que todos os ingredientes sejam utilizados antes de estragar, enquanto se experimenta novas receitas e se diversifica o cardápio.\n\n## Conclusão\nAs propostas discutidas oferecem soluções práticas e lúdicas para reduzir o desperdício de comida em casa. Ao incorporar desafios e um planejamento cuidadoso, é possível não apenas minimizar o desperdício, mas também transformar a experiência culinária em um momento de união familiar e criatividade. Implementar essas estratégias pode levar a uma mudança positiva nos hábitos alimentares, contribuindo para um estilo de vida mais sustentável e consciente."
+}

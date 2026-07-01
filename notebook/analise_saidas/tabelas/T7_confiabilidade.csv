@@ -1,11 +1,11 @@
 metrica,valor
-sessões,12.0
-chamadas LLM,336.0
-tokens in,170862.0
-tokens out,23075.0
-tokens total,193937.0
-custo total (US$),0.0395
-custo médio/sessão (US$),0.00329
-latência média/chamada (ms),1671.0
-taxa de falha,0.0
-parse ok (%),100.0
+sessões,108.0
+chamadas LLM,7236.0
+tokens in,1696139.0
+tokens out,176487.0
+tokens total,1872626.0
+custo total (US$),0.3603
+custo médio/sessão (US$),0.00334
+latência média/chamada (ms),826.0
+taxa de falha,0.5713
+parse ok (%),42.9

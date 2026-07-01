@@ -1,0 +1,612 @@
+{
+  "run_id": "sim_20260701_165543",
+  "finished_at": "2026-07-01T18:51:16",
+  "total_sessions": 108,
+  "errors": [],
+  "sessions": [
+    {
+      "session_id": "20260701-165543_27ca14c7",
+      "cell": 0,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-165647_a369f4d6",
+      "cell": 0,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-165737_ef44f765",
+      "cell": 0,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-165844_75bb4c73",
+      "cell": 0,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-165958_78544928",
+      "cell": 0,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-170122_6f4ed028",
+      "cell": 0,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-170232_dd966c31",
+      "cell": 1,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-170350_8caff9c0",
+      "cell": 1,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-170501_75915fc8",
+      "cell": 1,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-170613_f0038529",
+      "cell": 1,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-170712_05f14584",
+      "cell": 1,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-170815_590d3724",
+      "cell": 1,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-170906_9509096c",
+      "cell": 2,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-171001_5ffe3f52",
+      "cell": 2,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-171055_14ece741",
+      "cell": 2,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-171148_0ce38c4a",
+      "cell": 2,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-171242_2947c8c9",
+      "cell": 2,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-171356_fa515b42",
+      "cell": 2,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-171458_ae2c93b6",
+      "cell": 3,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-171611_46fdf257",
+      "cell": 3,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-171704_2e3382e7",
+      "cell": 3,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-171800_c7122144",
+      "cell": 3,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-171859_c5b90438",
+      "cell": 3,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-171958_99cf8594",
+      "cell": 3,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-172045_2006c4f1",
+      "cell": 4,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-172150_f03b2750",
+      "cell": 4,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-172242_29a0aa6e",
+      "cell": 4,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-172344_1d9828f0",
+      "cell": 4,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-172439_e324c18d",
+      "cell": 4,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-172532_99c46f9f",
+      "cell": 4,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-172640_49797b0a",
+      "cell": 5,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-172731_e266e597",
+      "cell": 5,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-172839_36b185d0",
+      "cell": 5,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-172932_e536c6b3",
+      "cell": 5,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-173031_f5197501",
+      "cell": 5,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-173124_9090f78a",
+      "cell": 5,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-173224_6c51cb40",
+      "cell": 6,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-173310_7e98a565",
+      "cell": 6,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-173407_b8559bce",
+      "cell": 6,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-173504_6c2195da",
+      "cell": 6,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-173733_9371fcce",
+      "cell": 6,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-173824_e6406122",
+      "cell": 6,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-173931_017bc1a2",
+      "cell": 7,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-174027_9484b2ef",
+      "cell": 7,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-174128_ad1c173a",
+      "cell": 7,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-174216_aafd7cd4",
+      "cell": 7,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-174307_81ca670e",
+      "cell": 7,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-174413_4ba782e3",
+      "cell": 7,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-174524_79e2c105",
+      "cell": 8,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-174628_99c40a07",
+      "cell": 8,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-174732_23d5f84c",
+      "cell": 8,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-174837_dc791f6f",
+      "cell": 8,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-174942_e02a155f",
+      "cell": 8,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-175046_d4d5ecf3",
+      "cell": 8,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-175150_65918906",
+      "cell": 9,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-175254_196bfd05",
+      "cell": 9,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-175359_87a2c3ba",
+      "cell": 9,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-175507_dd4e94f8",
+      "cell": 9,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-175612_53a21d43",
+      "cell": 9,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-175717_4ffa09e7",
+      "cell": 9,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-175822_5122b43a",
+      "cell": 10,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-175935_d817e543",
+      "cell": 10,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-180045_6c2aac74",
+      "cell": 10,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-180159_b32d1fab",
+      "cell": 10,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-180307_e87dac04",
+      "cell": 10,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-180411_a1a9f722",
+      "cell": 10,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-180516_229d63dc",
+      "cell": 11,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-180622_2f0cfef4",
+      "cell": 11,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-180729_a235f3ac",
+      "cell": 11,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-180832_90d26448",
+      "cell": 11,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-180937_b8a315b9",
+      "cell": 11,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-181042_559d5f59",
+      "cell": 11,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-181147_4bdfe7cb",
+      "cell": 12,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-181252_24fef383",
+      "cell": 12,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-181358_97863632",
+      "cell": 12,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-181505_f756d156",
+      "cell": 12,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-181609_5590625e",
+      "cell": 12,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-181715_80c09e06",
+      "cell": 12,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-181820_a08d710f",
+      "cell": 13,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-181927_5b1a4a4c",
+      "cell": 13,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-182033_042e3298",
+      "cell": 13,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-182138_734b571e",
+      "cell": 13,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-182245_deb6203f",
+      "cell": 13,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-182356_060e166d",
+      "cell": 13,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-182502_0177c499",
+      "cell": 14,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-182608_65cea033",
+      "cell": 14,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-182713_0a8765b1",
+      "cell": 14,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-182823_fbbd28d7",
+      "cell": 14,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-182929_9bef1084",
+      "cell": 14,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-183036_e5c19ea2",
+      "cell": 14,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-183143_5d23fe83",
+      "cell": 15,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-183250_59763fde",
+      "cell": 15,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-183355_e5068107",
+      "cell": 15,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-183500_7ef88e1e",
+      "cell": 15,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-183606_6bcd8562",
+      "cell": 15,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-183712_9b27e1b1",
+      "cell": 15,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-183817_f05901b3",
+      "cell": 16,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-183922_4e7873b6",
+      "cell": 16,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-184025_2bdbaf9e",
+      "cell": 16,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-184130_f877cde3",
+      "cell": 16,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-184235_0226f0fd",
+      "cell": 16,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-184341_ff820124",
+      "cell": 16,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-184444_5de9a270",
+      "cell": 17,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-184547_b4394bfa",
+      "cell": 17,
+      "persona": "cauteloso_t07"
+    },
+    {
+      "session_id": "20260701-184652_15f2cbb5",
+      "cell": 17,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-184800_872d545e",
+      "cell": 17,
+      "persona": "equilibrado_t07"
+    },
+    {
+      "session_id": "20260701-184903_72e55483",
+      "cell": 17,
+      "persona": "ousado_t07"
+    },
+    {
+      "session_id": "20260701-185007_5f4d8510",
+      "cell": 17,
+      "persona": "ousado_t07"
+    }
+  ],
+  "created_at": "2026-07-01T16:55:43",
+  "seed": 20260629,
+  "n_games": 2,
+  "jogadores": [
+    "cauteloso_t07",
+    "equilibrado_t07",
+    "ousado_t07"
+  ],
+  "jogadores_disponiveis": [
+    "cauteloso_t04",
+    "cauteloso_t07",
+    "cauteloso_t10",
+    "equilibrado_t04",
+    "equilibrado_t07",
+    "equilibrado_t10",
+    "ousado_t04",
+    "ousado_t07",
+    "ousado_t10"
+  ],
+  "temperaturas": [],
+  "condicoes": {
+    "best_idea": [
+      "judge",
+      "player",
+      "player_decides"
+    ],
+    "composicao": [
+      "comum"
+    ],
+    "tema": [
+      "Como reduzir o desperdício de comida em casa?",
+      "Uma nova forma de as pessoas fazerem amizades na vida adulta",
+      "O que torna uma vida bem vivida?",
+      "Como reduzir as alucinações de modelos de linguagem?",
+      "Como uma cidade média pode se adaptar a eventos climáticos extremos?",
+      "Como seria uma cidade projetada para o ócio, e não para o trabalho?"
+    ],
+    "rounds": [
+      6
+    ],
+    "source_blind_on_choice": [
+      true
+    ],
+    "judge_criterion": [
+      "composto"
+    ],
+    "model_pairing": [
+      "same_model"
+    ]
+  },
+  "model_map": {},
+  "juiz": null,
+  "judge_blind_follows_choice": true,
+  "yoked_seeds": [],
+  "formularios": "off",
+  "mark_synthetic": true,
+  "dry_run": false,
+  "plan": {
+    "cells": 18,
+    "jogadores": 3,
+    "n_games": 2,
+    "total_sessions": 108,
+    "approx_llm_calls": 4644
+  }
+}

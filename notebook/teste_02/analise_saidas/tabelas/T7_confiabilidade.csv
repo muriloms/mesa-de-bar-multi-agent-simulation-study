@@ -1,0 +1,11 @@
+metrica,valor
+sessões,108.0
+chamadas LLM,3672.0
+tokens in,1728222.0
+tokens out,230589.0
+tokens total,1958811.0
+custo total (US$),0.3976
+custo médio/sessão (US$),0.00368
+latência média/chamada (ms),2050.0
+taxa de falha,0.0
+parse ok (%),100.0

@@ -1,0 +1,44 @@
+{
+  "session_id": "20260701-181609_5590625e",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 6,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Ousado (T=0.7), faça sua proposta."
+    },
+    {
+      "player_id": 2,
+      "player_name": "Bia",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Ousado (T=0.7)",
+      "message": "Uma ideia simples sobre: Como reduzir o desperdício de comida em casa?"
+    },
+    {
+      "player_id": 2,
+      "player_name": "Bia",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 4,
+      "player_name": "Seu Antônio",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 4,
+      "player_name": "Seu Antônio",
+      "message": "Fiquei pensativo e não consegui formular bem minha ideia."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Ousado (T=0.7)",
+      "message": "Uma ideia simples sobre: Como reduzir o desperdício de comida em casa?"
+    }
+  ],
+  "final_summary": "A conversa foi boa, mas a ideia final se perdeu no barulho do bar."
+}
