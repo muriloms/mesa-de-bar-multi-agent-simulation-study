@@ -1,0 +1,115 @@
+{
+  "run_id": "sim_20260630_133248",
+  "finished_at": "2026-06-30T13:38:24",
+  "total_sessions": 12,
+  "errors": [],
+  "sessions": [
+    {
+      "session_id": "20260630-133248_b92d5719",
+      "cell": 0,
+      "persona": "cauteloso_t04"
+    },
+    {
+      "session_id": "20260630-133313_d95b8327",
+      "cell": 0,
+      "persona": "cauteloso_t04"
+    },
+    {
+      "session_id": "20260630-133340_e8f70231",
+      "cell": 0,
+      "persona": "ousado_t10"
+    },
+    {
+      "session_id": "20260630-133405_f0096d5a",
+      "cell": 0,
+      "persona": "ousado_t10"
+    },
+    {
+      "session_id": "20260630-133430_4c638559",
+      "cell": 1,
+      "persona": "cauteloso_t04"
+    },
+    {
+      "session_id": "20260630-133456_18a27225",
+      "cell": 1,
+      "persona": "cauteloso_t04"
+    },
+    {
+      "session_id": "20260630-133525_4cf06abe",
+      "cell": 1,
+      "persona": "ousado_t10"
+    },
+    {
+      "session_id": "20260630-133553_56eedf2a",
+      "cell": 1,
+      "persona": "ousado_t10"
+    },
+    {
+      "session_id": "20260630-133626_5ad1bd65",
+      "cell": 2,
+      "persona": "cauteloso_t04"
+    },
+    {
+      "session_id": "20260630-133657_1e967120",
+      "cell": 2,
+      "persona": "cauteloso_t04"
+    },
+    {
+      "session_id": "20260630-133721_cd1b16e5",
+      "cell": 2,
+      "persona": "ousado_t10"
+    },
+    {
+      "session_id": "20260630-133748_c4ed59e7",
+      "cell": 2,
+      "persona": "ousado_t10"
+    }
+  ],
+  "created_at": "2026-06-30T13:32:48",
+  "seed": 20260629,
+  "n_games": 2,
+  "jogadores": [
+    "cauteloso_t04",
+    "ousado_t10"
+  ],
+  "temperaturas": [],
+  "condicoes": {
+    "best_idea": [
+      "judge",
+      "player",
+      "player_decides"
+    ],
+    "composicao": [
+      "comum"
+    ],
+    "tema": [
+      "Como reduzir o desperdício de comida em casa?"
+    ],
+    "rounds": [
+      3
+    ],
+    "source_blind_on_choice": [
+      true
+    ],
+    "judge_criterion": [
+      "composto"
+    ],
+    "model_pairing": [
+      "same_model"
+    ]
+  },
+  "model_map": {},
+  "juiz": null,
+  "judge_blind_follows_choice": true,
+  "yoked_seeds": [],
+  "formularios": "off",
+  "mark_synthetic": true,
+  "dry_run": false,
+  "plan": {
+    "cells": 3,
+    "jogadores": 2,
+    "n_games": 2,
+    "total_sessions": 12,
+    "approx_llm_calls": 264
+  }
+}

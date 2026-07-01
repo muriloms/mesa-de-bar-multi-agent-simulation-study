@@ -1,0 +1,14 @@
+# Núcleo (obrigatório)
+pandas
+numpy
+scipy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+# Embeddings multilíngues (recomendado p/ o estudo final; sem isto cai no fallback TF-IDF)
+sentence-transformers
+# Mapa 2D melhor que PCA (opcional)
+umap-learn
+# Clusterização alternativa (opcional)
+hdbscan

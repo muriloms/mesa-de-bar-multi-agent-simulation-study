@@ -135,9 +135,11 @@ async def run_one_game(cell, jogador, run_id: str, mark: bool, sim: Simulacao,
     while guard < cell["rounds"] + 2:
         guard += 1
         seed_r = (llm_seed + round_i) % (2**31) if sim.yoked_seeds else None
-        idea = player_agent.propose(manager, jogador, state.topic, seed=seed_r)
+        idea = player_agent.propose(manager, jogador, state.topic, seed=seed_r,
+                                    session_id=session_id, round_num=round_i + 1)
         state = await game_service.submit_user_idea(session_id, human_id, idea)
-        ref = player_agent.pick(manager, jogador, state.topic, state.choice_options or [])
+        ref = player_agent.pick(manager, jogador, state.topic, state.choice_options or [],
+                                session_id=session_id, round_num=round_i + 1)
         if ref:
             state = await game_service.submit_player_pick(session_id, ref)
         agree = player_agent.decide_advance(jogador, decide_rng)
@@ -180,6 +182,20 @@ async def run_simulation(sim: Simulacao, run_id: Optional[str] = None,
     cells = expand_cells(sim)
     the_plan = plan(sim, jogadores, table_size=config.TABLE_SIZE)
 
+    # Diagnóstico: ids realmente carregados dos arquivos vs. o que foi pedido.
+    from simulacao.loader import list_jogadores
+    disponiveis = [j.id for j in list_jogadores()]
+    setup_errors = []
+    if not jogadores:
+        setup_errors.append(
+            "Nenhum jogador-sintético resolvido. "
+            f"Ids carregados de jogadores_simulados/: {disponiveis or 'NENHUM (arquivos ausentes/sem campo id)'}. "
+            f"Pedido em 'jogadores': {sim.jogadores}. "
+            "Use 'jogadores: todos' OU garanta que os ids batem com o campo 'id:' de cada arquivo "
+            "(e deixe 'temperaturas: []' se você já criou um arquivo por temperatura).")
+    if not cells:
+        setup_errors.append("Nenhuma célula de condição — verifique o bloco 'condicoes'.")
+
     out_dir = _output_dir(sim, run_id)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -189,6 +205,7 @@ async def run_simulation(sim: Simulacao, run_id: Optional[str] = None,
         "seed": sim.seed,
         "n_games": sim.n_games,
         "jogadores": [j.id for j in jogadores],
+        "jogadores_disponiveis": disponiveis,
         "temperaturas": sim.temperaturas,
         "condicoes": sim.condicoes.model_dump(),
         "model_map": {k: v.model_dump() for k, v in sim.model_map.items()},

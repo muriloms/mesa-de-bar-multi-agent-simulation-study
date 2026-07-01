@@ -1,32 +1,44 @@
 # ===========================================================================
-# SIMULAÇÃO — VERSÃO QUE RODA AGORA (Fatores A × B × C)
-# Usa SOMENTE chaves já suportadas pelo runner atual. Sem Fator D (modelos por
-# papel), sem variantes de loop, sem yoked — esses estão em simulacao_completa.yaml
-# e em simulacao_decomposicao.yaml e dependem dos 3 itens novos do runner.
+# SIMULAÇÃO — TESTE MÍNIMO (para desenvolver o notebook de análise)
+# Objetivo: gerar dados BARATOS que exercitem TODA a estrutura que o parser
+# vai ler — não tem pretensão estatística.
 #
-# Núcleo aqui: A(2) × B(3) × C(2) × 6 temas = 72 células×tema.
-# >>> Rode com dry_run: true primeiro (conta sessões e estima custo). <<<
+# O que este teste cobre de propósito:
+#   • best_idea com os 3 modos (judge / player / player_decides) -> cada um
+#     produz eventos round.* diferentes; o parser precisa lidar com os três.
+#   • 4 sessões por célula (2 jogadores × n_games=2) -> permite calcular a
+#     diversidade coletiva (DV de RQ2), que precisa de >1 sessão por célula.
+#   • 2 jogadores nos EXTREMOS (cauteloso frio × ousado quente) -> contraste
+#     de comportamento e teste do agrupamento por jogador (efeito aleatório).
+#   • rounds: 3 -> trajetória de convergência curta, mas com inclinação visível.
+#
+# Dimensionamento (confira com dry_run):
+#   células        = best_idea(3) × composicao(1) × source_blind(1) × tema(1) = 3
+#   total_sessions = 3 × jogadores(2) × n_games(2) = 12
+#   approx_calls   ≈ 12 × ~22 (rounds=3) ≈ ~264   (vs 557.280 do run completo)
+#
+# Para CRESCER rumo ao estudo real: adicione 'celebridade' em composicao,
+# mais temas, [true,false] em source_blind, e suba n_games. O run A×B×C
+# completo está em simulacao_abc.yaml.
 # ===========================================================================
 
 run_id: null
 seed: 20260629
-n_games: 20                  # mesas por célula por jogador-sintético (ajuste por poder)
+n_games: 2                   # baixo de propósito (4 sessões/célula com 2 jogadores)
 
-# População: os 9 jogadores (3 personas × 3 temperaturas). 'todos' também
-# funciona se a pasta jogadores_simulados/ tiver só estes 9 arquivos.
-jogadores: [cauteloso_t04, cauteloso_t07, cauteloso_t10, equilibrado_t04, equilibrado_t07, equilibrado_t10, ousado_t04, ousado_t07, ousado_t10]
+# 2 jogadores nos extremos (não os 9) — barato e com contraste forte.
+jogadores: [cauteloso_t04, ousado_t10]
 
 condicoes:
-  best_idea: [judge, player, player_decides]                      # FATOR B
-  composicao: [comum, celebridade]                                # FATOR A
-  source_blind_on_choice: [true, false]                           # FATOR C
-  rounds: [6]                                                     # controle (R=6)
-  judge_criterion: [composto]                                    # controle (composto)
-  # CONTROLE — 6 temas, 1 por nível de complexidade (cotidiano -> especulativo).
-  tema: ["Como reduzir o desperdício de comida em casa?", "Uma nova forma de as pessoas fazerem amizades na vida adulta", "O que torna uma vida bem vivida?", "Como reduzir as alucinações de modelos de linguagem?", "Como uma cidade média pode se adaptar a eventos climáticos extremos?", "Como seria uma cidade projetada para o ócio, e não para o trabalho?"]
+  best_idea: [judge, player, player_decides]   # os 3 modos (essencial p/ o parser)
+  composicao: [comum]                          # 1 só (adicione celebridade depois)
+  source_blind_on_choice: [true]               # 1 nível
+  rounds: [3]                                  # rodadas curtas
+  judge_criterion: [composto]                  # fixo
+  tema: ["Como reduzir o desperdício de comida em casa?"]   # 1 tema (cotidiano)
 
 formularios: "off"
 output_dir: data/sim_runs
 mark_synthetic: true
-dry_run: true
-max_parallel: 4
+dry_run: false               # gere os dados (mude p/ true só para contar/estimar)
+max_parallel: 2

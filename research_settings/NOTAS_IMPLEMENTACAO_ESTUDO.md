@@ -11,9 +11,10 @@
 
 ```
 research_settings/
-├── simulacao.yaml                 (RODA JÁ) — núcleo A×B×C, só chaves suportadas
-├── simulacao_completa.yaml        (depois) — A×B×C×D + model_map (3 itens novos do runner)
-├── simulacao_decomposicao.yaml    (depois) — variantes do loop B0–B3
+├── simulacao.yaml                 (TESTE MÍNIMO — roda por padrão; ~12 sessões, ~264 calls)
+├── simulacao_abc.yaml             (produção A×B×C — 72 células, ~12.960 sessões)
+├── simulacao_completa.yaml        (A×B×C×D — requer os 3 itens novos do runner)
+├── simulacao_decomposicao.yaml    (variantes do loop B0–B3 — requer runner)
 ├── temas/
 │   └── temas.yaml                 (SUBSTITUI o atual) — 6 níveis de complexidade
 ├── composicao_mesa/
@@ -25,6 +26,11 @@ research_settings/
     └── ousado_t04 / _t07 / _t10.yaml         (novos)   → 9 jogadores
 ```
 
+> **Para testar agora:** `simulacao.yaml` é o teste mínimo (3 células × 2
+> jogadores × n_games 2 = 12 sessões). Cobre os 3 modos de `best_idea` e dá 4
+> sessões/célula (diversidade coletiva calculável). Gera dados suficientes para
+> desenvolver o notebook. Os outros `simulacao_*.yaml` são para escalar depois.
+>
 > A pasta `juiz/` NÃO é tocada: o critério `composto` vem da condição
 > `judge_criterion: [composto]`, usando o seu `juiz/juiz.yaml` original.
 

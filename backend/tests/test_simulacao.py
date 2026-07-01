@@ -68,3 +68,38 @@ def test_novos_campos_carregam():
     if sim.model_map:
         rm = next(iter(sim.model_map.values()))
         assert rm.personas.model and rm.judge.model and rm.player.model
+
+
+def test_chamada_do_jogador_e_logada_e_entra_nos_custos():
+    """As chamadas do jogador-agente vão para llm_calls.jsonl (actor_role=player)
+    e entram no breakdown de custo, como personas/juiz/dono."""
+    from services import game_service as G
+    from domain.session import GlobalLlmConfig
+    from persistence import paths
+    from simulacao import agent
+    from simulacao.loader import JogadorPersona, JogadorLLM
+    from llm.client_base import LLMResponse
+    from services.costs import compute_session_costs
+    import json
+
+    class FakeMgr:
+        provider = "openai"; model = "gpt-4o-mini"
+        def complete(self, prompt, params):
+            return LLMResponse("ideia", tokens_in=50, tokens_out=10), 99
+
+    st = G.create_session_from_study(
+        "main", "T", GlobalLlmConfig(provider="openai", model="gpt-4o-mini", apiKey="k"))
+    sid = st.session_id
+    jog = JogadorPersona(id="cauteloso_t04", name="C", llm=JogadorLLM(temperature=0.4))
+    agent.propose(FakeMgr(), jog, st.topic, session_id=sid, round_num=1)
+
+    lines = paths.llm_log_path(sid).read_text(encoding="utf-8").splitlines()
+    players = [json.loads(l) for l in lines
+               if json.loads(l)["context"].get("actor_role") == "player"]
+    assert len(players) == 1
+    assert players[0]["tokens"] == {"in": 50, "out": 10}
+    assert players[0]["latency_ms"] == 99
+    assert players[0]["prompt_id"] == "sim_player_propose"
+
+    cb = compute_session_costs(sid)
+    assert any(k.startswith("player:") for k in cb["by_actor"])

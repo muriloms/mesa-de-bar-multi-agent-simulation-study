@@ -1,0 +1,29 @@
+{
+  "session_id": "20260630-133313_d95b8327",
+  "topic": "Como reduzir o desperdício de comida em casa?",
+  "round": 3,
+  "phase": "finished",
+  "messages": [
+    {
+      "player_id": 0,
+      "player_name": "Dono do Bar",
+      "message": "A pauta da noite é: 'Como reduzir o desperdício de comida em casa?'. Jogador Cauteloso (T=0.4), faça sua proposta."
+    },
+    {
+      "player_id": 5,
+      "player_name": "Bia",
+      "message": "Concordo, Dono do Bar! O lance de planejar as compras é essencial, mas que tal usar apps de gerenciamento de alimentos? Eles ajudam a monitorar o que a gente tem e a evitar compras desnecessárias. É tecnologia a nosso favor, sem pesar no bolso!"
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.4)",
+      "message": "Eu sugiro que criemos um calendário de refeições semanal, onde planejo o que vou cozinhar com os ingredientes que já tenho em casa, evitando compras desnecessárias e garantindo que os alimentos sejam consumidos antes de estragarem."
+    },
+    {
+      "player_id": 1,
+      "player_name": "Jogador Cauteloso (T=0.4)",
+      "message": "Eu sugiro que criemos um calendário de refeições semanal, onde planejo o que vou cozinhar e comprar, assim consigo usar os ingredientes antes que estraguem e evito compras desnecessárias."
+    }
+  ],
+  "final_summary": "# Resumo Final da Ideia: Como Reduzir o Desperdício de Comida em Casa\n\n## Introdução\nA redução do desperdício de comida em casa é uma preocupação crescente, tanto por questões econômicas quanto ambientais. Durante a discussão, foram apresentadas soluções práticas que podem ser implementadas no cotidiano para otimizar o uso dos alimentos e minimizar perdas.\n\n## Pontos Chave\n\n### 1. Planejamento de Compras\n- **Importância do Planejamento**: O planejamento é fundamental para evitar compras desnecessárias e garantir que os alimentos sejam consumidos antes de estragarem.\n- **Uso de Tecnologia**: Aplicativos de gerenciamento de alimentos podem ser ferramentas valiosas para monitorar itens na despensa e organizar as compras de forma mais eficiente.\n\n### 2. Criação de um Calendário de Refeições\n- **Organização Semanal**: Criar um calendário de refeições permite planejar o que cozinhar com os ingredientes já disponíveis em casa, reduzindo a probabilidade de desperdício.\n- **Maximização dos Ingredientes**: Ao planejar as refeições, é possível utilizar todos os ingredientes antes que se estraguem, aproveitando ao máximo o que foi comprado.\n\n## Conclusões\nA combinação de planejamento cuidadoso nas compras e o uso de tecnologia, juntamente com a criação de um calendário de refeições, pode levar a uma significativa redução no desperdício de alimentos em casa. Essas práticas não só ajudam a economizar dinheiro, mas também contribuem para um estilo de vida mais sustentável. Ao adotar essas estratégias, podemos transformar a maneira como lidamos com os alimentos em nossas casas, promovendo um consumo mais consciente e responsável."
+}
